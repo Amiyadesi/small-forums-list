@@ -1,0 +1,1398 @@
+[
+  {
+    "name": "Linux.do",
+    "aliases": [
+      "L 站"
+    ],
+    "url": "https://linux.do/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "tech_ai_dev",
+    "tags": [
+      "ai",
+      "developer",
+      "tools",
+      "public_good"
+    ],
+    "registration": "当前以站内规则和邀请/认证通道为准；新人需要阅读规则并完成基础任务后再发言。",
+    "vibe": "节奏很快的中文技术社区，AI、部署、Cloudflare、公益站和工具情报密度高，规则也比普通论坛严格。",
+    "benefits": "能看到不少 AI 公益站、模型/工具讨论、部署教程、福利羊毛和长篇共建文档。",
+    "risks": [
+      "注册门槛/邀请制",
+      "交易/商家信息"
+    ],
+    "notes": "适合先只读一段时间。不要购买来路不明的邀请码，也不要把短期羊毛当成长期服务。",
+    "sources": [
+      "https://linux.do/",
+      "https://linux.do/guidelines"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "V2EX",
+    "aliases": [
+      "V 站"
+    ],
+    "url": "https://www.v2ex.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "tech_ai_dev",
+    "tags": [
+      "developer",
+      "product",
+      "career",
+      "city"
+    ],
+    "registration": "注册和邀请规则会变化，无法注册时可先作为只读社区使用。",
+    "vibe": "中文技术社区里很老的一座广场，程序员、产品、生活、城市和职场话题混在一起。",
+    "benefits": "适合观察程序员日常、产品想法、效率工具、独立开发和远程工作话题。",
+    "risks": [
+      "交易/商家信息"
+    ],
+    "notes": "信息面广，但观点质量依主题而变。涉及交易、招聘和账号服务时需要自行核验。",
+    "sources": [
+      "https://www.v2ex.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "NodeLoc",
+    "aliases": [
+      "NL"
+    ],
+    "url": "https://www.nodeloc.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "host_webmaster",
+    "tags": [
+      "vps",
+      "developer",
+      "node",
+      "life"
+    ],
+    "registration": "常见为邀请码注册，具体以站内邀请页面和公告为准。",
+    "vibe": "自由、平等、友好、开放、有趣的技术生活混合社区，比老牌主机论坛更轻一点。",
+    "benefits": "能看到 VPS、网络、AI、域名、SIM 卡和生活类子论坛，也有电池等社区积分玩法。",
+    "risks": [
+      "注册门槛/邀请制",
+      "交易/商家信息"
+    ],
+    "notes": "讨论比较自由，回复质量也会更参差。新人适合先看站规和热门帖再参与交易。",
+    "sources": [
+      "https://www.nodeloc.com/",
+      "https://www.nodeloc.com/about"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "NodeSeek",
+    "aliases": [],
+    "url": "https://www.nodeseek.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "host_webmaster",
+    "tags": [
+      "vps",
+      "network",
+      "node",
+      "deals"
+    ],
+    "registration": "注册方式可能随站内策略变化，常见情况是需要邀请码或阶段性开放。",
+    "vibe": "偏主机、节点、网络和资源分享的中文社区，圈内缩写多，帖子节奏快。",
+    "benefits": "适合观察主机商活动、线路质量、节点体验和工具分享。",
+    "risks": [
+      "注册门槛/邀请制",
+      "交易/商家信息"
+    ],
+    "notes": "不要只看单个帖子就下单买机器，最好交叉看多站反馈和官方条款。",
+    "sources": [
+      "https://www.nodeseek.com/",
+      "https://nodeseek.cc/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "奶昔论坛",
+    "aliases": [
+      "NaixiBBS"
+    ],
+    "url": "https://cn.naixi.net/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "host_webmaster",
+    "tags": [
+      "vps",
+      "network",
+      "mjj",
+      "life"
+    ],
+    "registration": "注册、SSO 和访问入口以站内当前页面为准。",
+    "vibe": "和 NodeSeek 不同的独立论坛，偏 MJJ、VPS、网络、茶馆和生活杂谈。",
+    "benefits": "适合观察小号 MJJ 圈子的主机、网络、测评和日常讨论。",
+    "risks": [
+      "注册门槛/邀请制",
+      "交易/商家信息",
+      "入口不稳定"
+    ],
+    "notes": "不要把奶昔论坛当成 NodeSeek 别名；常见入口包括 cn.naixi.net 和 forum.naixi.net。",
+    "sources": [
+      "https://cn.naixi.net/",
+      "https://forum.naixi.net/forum.php?mobile=yes",
+      "https://forum.naixi.net/thread-10659-1-1.html"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "Lobsters",
+    "aliases": [],
+    "url": "https://lobste.rs/",
+    "language": [
+      "en"
+    ],
+    "category": "tech_ai_dev",
+    "tags": [
+      "programming",
+      "security",
+      "research",
+      "invite"
+    ],
+    "registration": "邀请制为主，需要现有用户邀请。",
+    "vibe": "英文程序员链接讨论社区，比大平台更克制，重视技术链接和高质量评论。",
+    "benefits": "适合看编程语言、系统、安全、开源和研究文章的讨论。",
+    "risks": [
+      "注册门槛/邀请制"
+    ],
+    "notes": "不是问答站，发帖更像提交值得讨论的链接。",
+    "sources": [
+      "https://lobste.rs/about",
+      "https://lobste.rs/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "Tildes",
+    "aliases": [],
+    "url": "https://tildes.net/",
+    "language": [
+      "en"
+    ],
+    "category": "tech_ai_dev",
+    "tags": [
+      "discussion",
+      "invite",
+      "longform"
+    ],
+    "registration": "邀请制为主，开放情况以官方公告为准。",
+    "vibe": "强调慢讨论和社区治理的英文社区，风格不像信息流平台。",
+    "benefits": "适合看技术、文化、科学、生活等主题的长讨论。",
+    "risks": [
+      "注册门槛/邀请制"
+    ],
+    "notes": "更适合愿意读长帖和遵守讨论规范的人。",
+    "sources": [
+      "https://tildes.net/",
+      "https://docs.tildes.net/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "HostLoc",
+    "aliases": [
+      "全球主机交流论坛"
+    ],
+    "url": "https://hostloc.com/forum.php",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "host_webmaster",
+    "tags": [
+      "vps",
+      "hosting",
+      "domain",
+      "webmaster"
+    ],
+    "registration": "注册、邀请码和发言限制以站内当前规则为准。",
+    "vibe": "老牌中文主机论坛，界面和话语体系都很传统，主机圈黑话和商家讨论很多。",
+    "benefits": "适合看 VPS 商家活动、口碑、线路吐槽和站长圈旧梗。",
+    "risks": [
+      "交易/商家信息"
+    ],
+    "notes": "信息噪音较大，买服务前应交叉看 NodeSeek、NodeLoc、商家文档和第三方测评。",
+    "sources": [
+      "https://hostloc.com/forum.php"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "大佬论坛",
+    "aliases": [
+      "dalao.net"
+    ],
+    "url": "https://www.dalao.net/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "host_webmaster",
+    "tags": [
+      "domain",
+      "webmaster",
+      "trading",
+      "mjj"
+    ],
+    "registration": "普通注册和交易权限以站内当前规则为准。",
+    "vibe": "小众域名和站长论坛，总能看到奇奇怪怪的域名、域名行情和站长日常。",
+    "benefits": "适合看域名交易、域名投资、国别域名、顶级域名、主机服务器和站长资源讨论。",
+    "risks": [
+      "交易/商家信息"
+    ],
+    "notes": "把它当域名玩家和站长交流入口，不要把论坛估值或成交帖当确定收益。",
+    "sources": [
+      "https://www.dalao.net/",
+      "https://www.dalao.net/about.htm",
+      "https://www.dalao.net/map.htm"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "LowEndTalk",
+    "aliases": [
+      "LET"
+    ],
+    "url": "https://lowendtalk.com/",
+    "language": [
+      "en"
+    ],
+    "category": "host_webmaster",
+    "tags": [
+      "vps",
+      "hosting",
+      "deals",
+      "providers"
+    ],
+    "registration": "普通账号注册，发帖和商家推广需遵守站内规则。",
+    "vibe": "英文低价 VPS / hosting 圈子的核心论坛之一，商家广告、用户测评和争议都会出现。",
+    "benefits": "适合观察海外低价 VPS 市场、商家活动和用户反馈。",
+    "risks": [
+      "交易/商家信息"
+    ],
+    "notes": "便宜机器风险和限制都多，尤其要看服务条款、退款政策和历史口碑。",
+    "sources": [
+      "https://lowendtalk.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "LowEndSpirit",
+    "aliases": [
+      "LES"
+    ],
+    "url": "https://lowendspirit.com/",
+    "language": [
+      "en"
+    ],
+    "category": "host_webmaster",
+    "tags": [
+      "vps",
+      "hosting",
+      "small-providers"
+    ],
+    "registration": "普通账号注册，具体限制以站内为准。",
+    "vibe": "低价主机圈的另一个英文社区，讨论更偏小商家、轻量服务和社区口碑。",
+    "benefits": "适合交叉观察 LowEndTalk 外的 VPS 商家反馈。",
+    "risks": [
+      "交易/商家信息"
+    ],
+    "notes": "把它当作市场观察入口，不要把单个促销帖当成可靠背书。",
+    "sources": [
+      "https://lowendspirit.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "WebHostingTalk",
+    "aliases": [
+      "WHT"
+    ],
+    "url": "https://www.webhostingtalk.com/",
+    "language": [
+      "en"
+    ],
+    "category": "host_webmaster",
+    "tags": [
+      "hosting",
+      "server",
+      "business"
+    ],
+    "registration": "普通账号注册，商家广告和交易区有额外规则。",
+    "vibe": "老牌英文 hosting 论坛，更偏主机业务、IDC、服务器和服务商讨论。",
+    "benefits": "适合看 hosting 行业讨论、服务商口碑和运营经验。",
+    "risks": [
+      "交易/商家信息"
+    ],
+    "notes": "商业推广内容多，判断时要区分广告、用户反馈和站方规则。",
+    "sources": [
+      "https://www.webhostingtalk.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "NamePros",
+    "aliases": [],
+    "url": "https://www.namepros.com/",
+    "language": [
+      "en"
+    ],
+    "category": "host_webmaster",
+    "tags": [
+      "domain",
+      "marketplace",
+      "webmaster"
+    ],
+    "registration": "普通账号注册，域名交易和拍卖需遵守站内规则。",
+    "vibe": "域名投资和交易社区，英文域名圈的讨论、估值和市场信息很多。",
+    "benefits": "适合观察域名买卖、估值思路、注册商和争议案例。",
+    "risks": [
+      "交易/商家信息"
+    ],
+    "notes": "域名交易容易高估价值，新人不要把论坛估值当作确定收益。",
+    "sources": [
+      "https://www.namepros.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "OpenWrt Forum",
+    "aliases": [],
+    "url": "https://forum.openwrt.org/",
+    "language": [
+      "en"
+    ],
+    "category": "host_webmaster",
+    "tags": [
+      "router",
+      "network",
+      "openwrt",
+      "firmware"
+    ],
+    "registration": "普通账号注册，提问前建议先查设备支持表和旧帖。",
+    "vibe": "OpenWrt 官方论坛，偏路由器、网络、固件和排障。",
+    "benefits": "适合查设备兼容、固件升级、网络配置和故障排查。",
+    "risks": [
+      "安全/双用途技术"
+    ],
+    "notes": "刷机有变砖风险，跟教程操作前要确认设备型号和备份方式。",
+    "sources": [
+      "https://forum.openwrt.org/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "恩山无线论坛",
+    "aliases": [
+      "恩山"
+    ],
+    "url": "https://www.right.com.cn/forum/index.php",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "host_webmaster",
+    "tags": [
+      "router",
+      "openwrt",
+      "network",
+      "firmware"
+    ],
+    "registration": "账号注册和下载权限以站内规则为准。",
+    "vibe": "中文路由器、固件、OpenWrt 和网络设备圈的重要论坛。",
+    "benefits": "适合找路由器型号讨论、固件经验、网络配置和硬件折腾资料。",
+    "risks": [
+      "安全/双用途技术",
+      "版权敏感"
+    ],
+    "notes": "第三方固件和脚本需要自行判断来源安全，别在主路由上盲刷。",
+    "sources": [
+      "https://www.right.com.cn/forum/index.php"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "萌国萌站广场",
+    "aliases": [
+      "萌国ICP备案",
+      "萌备",
+      "萌社区"
+    ],
+    "url": "https://icp.gov.moe/aboutus.php",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "host_webmaster",
+    "tags": [
+      "indie-web",
+      "personal-site",
+      "moe",
+      "blogroll"
+    ],
+    "registration": "加入萌备需要提交站点并人工审核，站点性质和质量有明确要求。",
+    "vibe": "更像萌系个人站和独立博客生态入口，不是传统发帖论坛。",
+    "benefits": "适合发现个人主页、小博客、萌系站点和站长之间的友链网络。",
+    "risks": [
+      "注册门槛/邀请制"
+    ],
+    "notes": "它应归到站长/独立站生态，而不是泛技术论坛。萌备申请要求排除商业、政治、色情、灰色、版权和破解等内容。",
+    "sources": [
+      "https://icp.gov.moe/",
+      "https://icp.gov.moe/aboutus.php",
+      "https://icp.gov.moe/join.php"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "虫部落",
+    "aliases": [
+      "Chongbuluo"
+    ],
+    "url": "https://www.chongbuluo.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "search_resource_tools",
+    "tags": [
+      "search",
+      "knowledge",
+      "tools",
+      "community"
+    ],
+    "registration": "普通注册，发帖和工具使用以站内规则为准。",
+    "vibe": "围绕搜索工具、搜索技巧、资料发现和生活讨论的社区，存活时间较久，普通交流占比高。",
+    "benefits": "适合学习搜索方法、发现搜索工具、看资料检索经验和日常讨论。",
+    "risks": [
+      "版权敏感"
+    ],
+    "notes": "虫部落更像搜索工具和搜索经验社区，不是单纯资源下载站。使用搜索技巧时仍要注意版权和隐私边界。",
+    "sources": [
+      "https://www.chongbuluo.com/",
+      "https://search.chongbuluo.com/",
+      "https://www.chongbuluo.com/thread-7484-1-1.html"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "吾爱破解",
+    "aliases": [
+      "52pojie"
+    ],
+    "url": "https://www.52pojie.cn/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "security_system_software",
+    "tags": [
+      "reverse-engineering",
+      "security",
+      "software",
+      "learning"
+    ],
+    "registration": "开放注册常带活动性质，具体以官方公告为准。",
+    "vibe": "逆向、安全、软件分析相关的中文老社区，版块秩序和学习资料都比较成体系。",
+    "benefits": "适合学习逆向工程基础、调试、软件安全和工具使用。",
+    "risks": [
+      "安全/双用途技术",
+      "版权敏感"
+    ],
+    "notes": "只把它当学习和安全分析社区。不要传播侵权软件、绕过授权或做破坏性用途。",
+    "sources": [
+      "https://www.52pojie.cn/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "看雪论坛",
+    "aliases": [
+      "Kanxue"
+    ],
+    "url": "https://bbs.kanxue.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "security_system_software",
+    "tags": [
+      "security",
+      "reverse-engineering",
+      "binary",
+      "ctf"
+    ],
+    "registration": "普通注册和活动权限以站内规则为准。",
+    "vibe": "中文安全和逆向圈老社区，技术深度比泛工具论坛更高。",
+    "benefits": "适合看二进制安全、逆向分析、漏洞研究和安全竞赛相关内容。",
+    "risks": [
+      "安全/双用途技术"
+    ],
+    "notes": "双用途技术很多，学习时要明确授权边界和实验环境。",
+    "sources": [
+      "https://bbs.kanxue.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "T00ls",
+    "aliases": [],
+    "url": "https://www.t00ls.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "security_system_software",
+    "tags": [
+      "security",
+      "web-security",
+      "invite"
+    ],
+    "registration": "社区门槛和邀请方式以站内规则为准。",
+    "vibe": "更偏安全圈的中文社区，站名和自我定位都强调低调和安全学习。",
+    "benefits": "适合观察 Web 安全、安全学习和圈内资料。",
+    "risks": [
+      "安全/双用途技术",
+      "注册门槛/邀请制"
+    ],
+    "notes": "不要把安全讨论用于未授权测试或攻击。",
+    "sources": [
+      "https://www.t00ls.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "卡饭论坛",
+    "aliases": [
+      "Kafan"
+    ],
+    "url": "https://bbs.kafan.cn/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "security_system_software",
+    "tags": [
+      "antivirus",
+      "windows",
+      "software",
+      "security"
+    ],
+    "registration": "普通注册，下载、发帖和部分板块权限以站内规则为准。",
+    "vibe": "中文安全软件、杀毒软件、Windows 工具和系统维护讨论社区。",
+    "benefits": "适合看杀软评测、系统工具、软件讨论和安全产品反馈。",
+    "risks": [
+      "安全/双用途技术",
+      "版权敏感"
+    ],
+    "notes": "软件下载和脚本内容要注意来源和授权，不要盲目执行陌生工具。",
+    "sources": [
+      "https://bbs.kafan.cn/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "远景论坛",
+    "aliases": [
+      "PCBETA"
+    ],
+    "url": "https://bbs.pcbeta.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "security_system_software",
+    "tags": [
+      "windows",
+      "software",
+      "system",
+      "beta"
+    ],
+    "registration": "普通注册，部分资源和板块权限以站内规则为准。",
+    "vibe": "Windows、系统镜像、软件和硬件折腾相关的中文老论坛。",
+    "benefits": "适合观察 Windows 系统更新、系统工具、驱动和桌面软件讨论。",
+    "risks": [
+      "版权敏感",
+      "安全/双用途技术"
+    ],
+    "notes": "系统镜像和激活类内容要特别注意版权、安全和法律风险。",
+    "sources": [
+      "https://bbs.pcbeta.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "无忧启动论坛",
+    "aliases": [
+      "Wuyou"
+    ],
+    "url": "http://bbs.wuyou.net/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "security_system_software",
+    "tags": [
+      "pe",
+      "boot",
+      "windows",
+      "system-maintenance"
+    ],
+    "registration": "普通注册，具体权限以站内规则为准。",
+    "vibe": "偏 PE、启动盘、系统维护和装机工具的中文论坛。",
+    "benefits": "适合看 WinPE、启动引导、系统维护和装机方案。",
+    "risks": [
+      "安全/双用途技术",
+      "版权敏感"
+    ],
+    "notes": "启动盘和维护工具权限很高，下载和使用前必须确认来源。",
+    "sources": [
+      "http://bbs.wuyou.net/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "XDA Forums",
+    "aliases": [
+      "XDA Developers"
+    ],
+    "url": "https://xdaforums.com/",
+    "language": [
+      "en"
+    ],
+    "category": "security_system_software",
+    "tags": [
+      "android",
+      "rom",
+      "mobile",
+      "modding"
+    ],
+    "registration": "普通账号注册，发帖需遵守设备版块规则。",
+    "vibe": "Android 刷机、ROM、内核和移动设备改造的英文老论坛。",
+    "benefits": "适合找设备版块、ROM、Root、内核和排障资料。",
+    "risks": [
+      "安全/双用途技术",
+      "设备/刷机风险"
+    ],
+    "notes": "刷机、解锁和 Root 都可能导致数据丢失、保修问题或设备变砖。",
+    "sources": [
+      "https://xdaforums.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "Bangumi",
+    "aliases": [
+      "番组计划",
+      "BGM"
+    ],
+    "url": "https://bgm.tv/",
+    "language": [
+      "zh-CN",
+      "ja",
+      "en"
+    ],
+    "category": "acg_game_niche",
+    "tags": [
+      "anime",
+      "game",
+      "book",
+      "collection",
+      "rating"
+    ],
+    "registration": "普通注册，具体限制以站点当前规则为准。",
+    "vibe": "用条目、收藏、评分、进度和小组把动画、游戏、书籍组织起来的 ACG 社区。",
+    "benefits": "适合记录观看/游玩进度、查条目、看评价和进入小组讨论。",
+    "risks": [],
+    "notes": "它不像信息流社区，更像长期记录和慢讨论的资料库。",
+    "sources": [
+      "https://bgm.tv/",
+      "https://bangumi.tv/about"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "Doki Chinese Club",
+    "aliases": [
+      "DCC"
+    ],
+    "url": "https://forum.monika.love/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "acg_game_niche",
+    "tags": [
+      "ddlc",
+      "acg",
+      "fan-community",
+      "small-circle"
+    ],
+    "registration": "注册方式和板块权限以站内当前规则为准。",
+    "vibe": "偏二次元和 DDLC 相关的小圈子社区，更像一个房间而不是广场。",
+    "benefits": "适合观察 ACG 小圈子、同好讨论和站点文化。",
+    "risks": [
+      "注册门槛/邀请制"
+    ],
+    "notes": "进入前先看版规和站内语气，不要把大平台发言习惯直接带进去。",
+    "sources": [
+      "https://forum.monika.love/",
+      "https://forum.monika.love/d/1502"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "Stage1st",
+    "aliases": [
+      "S1",
+      "Stage1st 论坛"
+    ],
+    "url": "https://stage1st.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "acg_game_niche",
+    "tags": [
+      "anime",
+      "game",
+      "otaku",
+      "discussion"
+    ],
+    "registration": "注册、发帖和邀请码政策以站内当前规则为准。",
+    "vibe": "中文 ACG 和游戏讨论老论坛，圈内梗和长帖很多。",
+    "benefits": "适合看动画、游戏、手游、业界和综合闲聊讨论。",
+    "risks": [
+      "注册门槛/邀请制"
+    ],
+    "notes": "版面文化比较强，新人先只读更稳。",
+    "sources": [
+      "https://stage1st.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "A9VG",
+    "aliases": [
+      "A9"
+    ],
+    "url": "https://bbs.a9vg.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "acg_game_niche",
+    "tags": [
+      "console-game",
+      "playstation",
+      "xbox",
+      "nintendo"
+    ],
+    "registration": "普通注册，具体发帖限制以站内规则为准。",
+    "vibe": "中文主机游戏论坛，长期围绕 PlayStation、Xbox、Nintendo 和游戏新闻讨论。",
+    "benefits": "适合看主机游戏新闻、攻略、硬件和玩家讨论。",
+    "risks": [],
+    "notes": "主机平台争论容易情绪化，适合把它当玩家视角样本。",
+    "sources": [
+      "https://bbs.a9vg.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "TGFC",
+    "aliases": [
+      "TGFC 俱乐部"
+    ],
+    "url": "https://club.tgfcer.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "acg_game_niche",
+    "tags": [
+      "game",
+      "old-forum",
+      "life",
+      "console"
+    ],
+    "registration": "注册和发帖限制以站内规则为准。",
+    "vibe": "中文老游戏论坛气质，游戏、生活和综合讨论混在一起。",
+    "benefits": "适合观察老玩家社区、主机游戏讨论和传统论坛文化。",
+    "risks": [
+      "注册门槛/邀请制"
+    ],
+    "notes": "老论坛语境强，外部读者需要适应站内黑话。",
+    "sources": [
+      "https://club.tgfcer.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "天使动漫论坛",
+    "aliases": [
+      "TSDM"
+    ],
+    "url": "https://www.tsdm39.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "acg_game_niche",
+    "tags": [
+      "anime",
+      "music",
+      "subculture",
+      "forum"
+    ],
+    "registration": "普通注册，资源区和权限以站内积分/等级规则为准。",
+    "vibe": "偏动漫、音乐、字幕、资源和社群活动的传统论坛。",
+    "benefits": "适合观察传统 ACG 论坛的版块、积分和长期用户运营。",
+    "risks": [
+      "版权敏感"
+    ],
+    "notes": "资源相关内容涉及版权风险，本列表不提供资源获取教程。",
+    "sources": [
+      "https://www.tsdm39.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "MineBBS",
+    "aliases": [],
+    "url": "https://www.minebbs.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "acg_game_niche",
+    "tags": [
+      "minecraft",
+      "server",
+      "plugin",
+      "community"
+    ],
+    "registration": "普通注册，资源发布和下载权限以站内规则为准。",
+    "vibe": "Minecraft 服务器、插件、资源和开发者相关中文社区。",
+    "benefits": "适合找 MC 服务器搭建经验、插件发布、服主讨论和资源生态。",
+    "risks": [
+      "版权敏感",
+      "交易/商家信息"
+    ],
+    "notes": "插件和整合包需看授权，服务器交易或外包需要自行核验。",
+    "sources": [
+      "https://www.minebbs.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "VNDB Forums",
+    "aliases": [
+      "The Visual Novel Database"
+    ],
+    "url": "https://vndb.org/t",
+    "language": [
+      "en"
+    ],
+    "category": "acg_game_niche",
+    "tags": [
+      "visual-novel",
+      "database",
+      "discussion"
+    ],
+    "registration": "普通账号注册，编辑和讨论需遵守站点规则。",
+    "vibe": "视觉小说数据库附带的讨论区，偏条目维护、作品信息和玩家讨论。",
+    "benefits": "适合查视觉小说条目、标签、发行信息和社区讨论。",
+    "risks": [
+      "18+"
+    ],
+    "notes": "视觉小说内容可能包含成人主题，浏览前注意年龄和地区规则。",
+    "sources": [
+      "https://vndb.org/",
+      "https://vndb.org/t"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "Chiphell",
+    "aliases": [
+      "CHH"
+    ],
+    "url": "https://www.chiphell.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "hardware_homelab",
+    "tags": [
+      "hardware",
+      "pc",
+      "photography",
+      "lifestyle"
+    ],
+    "registration": "注册和发帖权限以站内当前规则为准。",
+    "vibe": "硬件、装机、摄影、车和生活方式混合的中文论坛，审美和消费属性很强。",
+    "benefits": "适合看硬件开箱、装机方案、外设、摄影和高消费玩家经验。",
+    "risks": [
+      "交易/商家信息"
+    ],
+    "notes": "种草能力很强，购买前要区分展示、评测和个人消费偏好。",
+    "sources": [
+      "https://www.chiphell.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "数码之家",
+    "aliases": [
+      "MyDigit"
+    ],
+    "url": "https://www.mydigit.cn/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "hardware_homelab",
+    "tags": [
+      "electronics",
+      "repair",
+      "diy",
+      "hardware"
+    ],
+    "registration": "普通注册，具体权限以站内规则为准。",
+    "vibe": "偏拆机、维修、电子 DIY、工具和硬件折腾的中文论坛。",
+    "benefits": "适合看拆解、维修经验、电子工具和小硬件改造。",
+    "risks": [
+      "设备/刷机风险",
+      "安全风险"
+    ],
+    "notes": "涉及电源、电池和高压设备时要注意安全，不要盲目照抄。",
+    "sources": [
+      "https://www.mydigit.cn/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "Level1Techs Forum",
+    "aliases": [
+      "Level1Techs"
+    ],
+    "url": "https://forum.level1techs.com/",
+    "language": [
+      "en"
+    ],
+    "category": "hardware_homelab",
+    "tags": [
+      "linux",
+      "hardware",
+      "homelab",
+      "workstation"
+    ],
+    "registration": "普通账号注册，发帖需遵守站内规则。",
+    "vibe": "英文硬件、Linux、工作站、虚拟化和 homelab 社区。",
+    "benefits": "适合看高端硬件、Linux 桌面、服务器、存储和虚拟化讨论。",
+    "risks": [],
+    "notes": "技术含量较高，适合有一定硬件和 Linux 基础后再深入。",
+    "sources": [
+      "https://forum.level1techs.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "EEVblog Forum",
+    "aliases": [],
+    "url": "https://www.eevblog.com/forum/",
+    "language": [
+      "en"
+    ],
+    "category": "hardware_homelab",
+    "tags": [
+      "electronics",
+      "engineering",
+      "repair",
+      "test-equipment"
+    ],
+    "registration": "普通账号注册。",
+    "vibe": "电子工程、仪器、维修和硬件设计相关的英文论坛。",
+    "benefits": "适合看示波器、万用表、电源、PCB、维修和电子工程讨论。",
+    "risks": [
+      "安全风险"
+    ],
+    "notes": "涉及电气安全和维修时需要专业判断。",
+    "sources": [
+      "https://www.eevblog.com/forum/index.php?action=recent",
+      "https://www.eevblog.com/forum/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "ServeTheHome Forums",
+    "aliases": [
+      "STH"
+    ],
+    "url": "https://forums.servethehome.com/",
+    "language": [
+      "en"
+    ],
+    "category": "hardware_homelab",
+    "tags": [
+      "server",
+      "homelab",
+      "network",
+      "storage"
+    ],
+    "registration": "普通账号注册。",
+    "vibe": "服务器、企业硬件、二手设备、存储和 homelab 的英文社区。",
+    "benefits": "适合看家用服务器、二手企业设备、网络交换机和存储方案。",
+    "risks": [
+      "交易/商家信息"
+    ],
+    "notes": "很多讨论基于海外二手市场，价格和可得性不一定适合国内。",
+    "sources": [
+      "https://forums.servethehome.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "Overclock.net",
+    "aliases": [
+      "OCN"
+    ],
+    "url": "https://www.overclock.net/",
+    "language": [
+      "en"
+    ],
+    "category": "hardware_homelab",
+    "tags": [
+      "pc",
+      "overclocking",
+      "cooling",
+      "hardware"
+    ],
+    "registration": "普通账号注册。",
+    "vibe": "英文 PC 超频、散热、硬件和外设论坛。",
+    "benefits": "适合看超频经验、散热方案、硬件对比和玩家长帖。",
+    "risks": [
+      "设备/刷机风险"
+    ],
+    "notes": "超频和刷 BIOS 有硬件风险，操作前需要理解保修和稳定性影响。",
+    "sources": [
+      "https://www.overclock.net/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "南+",
+    "aliases": [
+      "South Plus"
+    ],
+    "url": "https://www.south-plus.net/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "adult_resource_gray",
+    "tags": [
+      "adult",
+      "acg",
+      "resource",
+      "traditional-forum"
+    ],
+    "registration": "注册、访问和域名状态变化较多，以站点当前可访问页面为准。",
+    "vibe": "成人向、ACG 向、资源向传统论坛，靠版块、积分和长期用户维持运转。",
+    "benefits": "常见内容包括成人 ACG、同人、游戏、图文、资源索引、求物、茶馆和积分权限相关讨论。",
+    "risks": [
+      "18+",
+      "版权敏感",
+      "入口不稳定",
+      "钓鱼/恶意下载",
+      "隐私侵害"
+    ],
+    "notes": "可观察传统论坛、积分和资源型社群运营；主要风险是侵权转载、未授权成人内容、诱导下载和域名仿冒。不提供资源获取、绕过访问或最新地址教程。",
+    "sources": [
+      "https://www.south-plus.net/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "Level Plus",
+    "aliases": [
+      "北+",
+      "North Plus"
+    ],
+    "url": "https://level-plus.net/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "adult_resource_gray",
+    "tags": [
+      "adult",
+      "acg",
+      "resource",
+      "traditional-forum"
+    ],
+    "registration": "注册和访问方式以站点当前页面为准。",
+    "vibe": "与南+文化相近的成人/ACG/资源向论坛样本。",
+    "benefits": "常见内容包括成人 ACG、资源索引、游戏/同人讨论、求物和社区茶馆。",
+    "risks": [
+      "18+",
+      "版权敏感",
+      "入口不稳定",
+      "钓鱼/恶意下载",
+      "隐私侵害"
+    ],
+    "notes": "重点风险是侵权资源、成人内容边界、仿冒域名和不可信下载。不提供资源下载指引。",
+    "sources": [
+      "https://level-plus.net/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "草榴社区",
+    "aliases": [
+      "CL"
+    ],
+    "url": "https://t66y.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "adult_resource_gray",
+    "tags": [
+      "adult",
+      "old-forum",
+      "resource"
+    ],
+    "registration": "访问、注册和域名状态变化较多，以当前公开页面为准。",
+    "vibe": "中文互联网里很有名的成人向老论坛样本，社区文化和风险都很强。",
+    "benefits": "常见内容包括成人图文/视频索引、综合讨论、资源线索、广告推广和老论坛式分区。",
+    "risks": [
+      "18+",
+      "版权敏感",
+      "入口不稳定",
+      "安全风险",
+      "钓鱼/恶意下载",
+      "隐私侵害",
+      "黑灰产信息"
+    ],
+    "notes": "常见风险包括侵权成人内容、隐私侵害、广告诱导、仿冒入口、钓鱼下载和灰色推广。不提供最新地址、访问绕过或资源获取教程。",
+    "sources": [
+      "https://t66y.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "ZodGame",
+    "aliases": [
+      "ZOD"
+    ],
+    "url": "https://zodgame.xyz/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "adult_resource_gray",
+    "tags": [
+      "adult",
+      "game",
+      "mod",
+      "resource"
+    ],
+    "registration": "注册门槛和开放状态以站点当前页面为准。",
+    "vibe": "偏成人游戏、角色卡、MOD 和资源讨论的论坛型社区。",
+    "benefits": "常见内容包括成人游戏、角色卡、MOD、整合包、工具、求物和玩家交流。",
+    "risks": [
+      "18+",
+      "版权敏感",
+      "入口不稳定",
+      "安全风险",
+      "钓鱼/恶意下载"
+    ],
+    "notes": "重点风险是未授权资源、可执行文件/压缩包安全、整合包授权和仿冒站点。不提供注册经验、资源获取或绕过访问教程。",
+    "sources": [
+      "https://zodgame.xyz/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "富贵论坛",
+    "aliases": [
+      "FGLT"
+    ],
+    "url": "https://www.fglt.me/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "adult_resource_gray",
+    "tags": [
+      "resource",
+      "forum",
+      "gray-area"
+    ],
+    "registration": "注册、访问和域名以站点当前页面为准。",
+    "vibe": "资源向论坛样本，适合放在灰区资源社区观察类目下。",
+    "benefits": "常见内容包括资源索引、软件/教程/网盘线索、积分权限、求助和综合讨论。",
+    "risks": [
+      "版权敏感",
+      "入口不稳定",
+      "安全风险",
+      "钓鱼/恶意下载",
+      "黑灰产信息"
+    ],
+    "notes": "可能出现盗版资源、倒卖资源、网盘诱导下载、不可信压缩包和账号/积分交易风险。不提供资源获取教程。",
+    "sources": [
+      "https://www.fglt.me/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "福利吧论坛",
+    "aliases": [
+      "wnflb2023",
+      "福利吧"
+    ],
+    "url": "https://www.wnflb2023.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "adult_resource_gray",
+    "tags": [
+      "adult",
+      "resource",
+      "life",
+      "work"
+    ],
+    "registration": "论坛入口和账号体系以福利吧公开说明和当前可访问页面为准。",
+    "vibe": "资源、成人向内容、工作和生活交流共存的论坛型社区，能看到不少稀缺资源线索。",
+    "benefits": "常见内容包括成人内容、影视/软件/教程/网盘资源线索、工作生活交流、福利线报和杂谈。",
+    "risks": [
+      "18+",
+      "版权敏感",
+      "入口不稳定",
+      "安全风险",
+      "钓鱼/恶意下载",
+      "黑灰产信息"
+    ],
+    "notes": "可能出现侵权资源、擦边引流、倒卖资源、网盘诱导下载、钓鱼页面和不可信附件。福利吧公开 Q&A 提到论坛地址为 wnflb2023.com，旧数据和账号积分曾有丢失历史。",
+    "sources": [
+      "https://fuliba2023.net/qa",
+      "https://www.wnflb2023.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "Something Awful Forums",
+    "aliases": [
+      "SA"
+    ],
+    "url": "https://forums.somethingawful.com/",
+    "language": [
+      "en"
+    ],
+    "category": "overseas_old_forum",
+    "tags": [
+      "old-forum",
+      "comedy",
+      "subculture"
+    ],
+    "registration": "注册通常需要付费账号，具体以官方注册页为准。",
+    "vibe": "英文老互联网论坛代表之一，文化、梗和版块历史都很强。",
+    "benefits": "适合观察早期论坛文化、长线用户社区和付费门槛治理。",
+    "risks": [
+      "付费注册"
+    ],
+    "notes": "社区语境非常本土化，新人不一定容易融入。",
+    "sources": [
+      "https://forums.somethingawful.com/",
+      "https://store.somethingawful.com/products/register.php"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "MetaFilter",
+    "aliases": [
+      "MeFi"
+    ],
+    "url": "https://www.metafilter.com/",
+    "language": [
+      "en"
+    ],
+    "category": "overseas_old_forum",
+    "tags": [
+      "link-sharing",
+      "discussion",
+      "old-web"
+    ],
+    "registration": "账号注册和发帖政策以官方页面为准。",
+    "vibe": "老牌英文链接分享和讨论社区，强调人工筛选和社区语境。",
+    "benefits": "适合观察非算法信息流时代的链接社区和慢讨论。",
+    "risks": [],
+    "notes": "不像论坛分区那样直观，更像长期社区化的链接精选。",
+    "sources": [
+      "https://www.metafilter.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "Ars OpenForum",
+    "aliases": [
+      "Ars Technica OpenForum"
+    ],
+    "url": "https://arstechnica.com/civis/",
+    "language": [
+      "en"
+    ],
+    "category": "overseas_old_forum",
+    "tags": [
+      "technology",
+      "science",
+      "old-forum"
+    ],
+    "registration": "普通账号注册，发帖以 Ars Technica 社区规则为准。",
+    "vibe": "Ars Technica 旗下的老牌技术讨论论坛，偏科技、科学、硬件和政策。",
+    "benefits": "适合看英文技术媒体读者社区的长讨论。",
+    "risks": [],
+    "notes": "更像媒体社区和论坛文化的混合体。",
+    "sources": [
+      "https://arstechnica.com/civis/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "ResetEra",
+    "aliases": [],
+    "url": "https://www.resetera.com/",
+    "language": [
+      "en"
+    ],
+    "category": "overseas_old_forum",
+    "tags": [
+      "game",
+      "industry",
+      "forum"
+    ],
+    "registration": "注册和邮箱要求以站点当前规则为准。",
+    "vibe": "英文游戏和泛文化讨论论坛，承接了一部分传统游戏论坛用户。",
+    "benefits": "适合看海外游戏业界新闻、玩家观点和长线讨论。",
+    "risks": [
+      "注册门槛/邀请制"
+    ],
+    "notes": "话题和管理风格有明显社区立场，阅读时要带着语境判断。",
+    "sources": [
+      "https://www.resetera.com/"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
+    "name": "NeoGAF",
+    "aliases": [],
+    "url": "https://www.neogaf.com/",
+    "language": [
+      "en"
+    ],
+    "category": "overseas_old_forum",
+    "tags": [
+      "game",
+      "old-forum",
+      "industry"
+    ],
+    "registration": "注册和发帖限制以站点当前规则为准。",
+    "vibe": "英文游戏论坛老名字，和 ResetEra 的历史关系常被放在一起讨论。",
+    "benefits": "适合观察海外游戏论坛文化、业界新闻传播和老社区变迁。",
+    "risks": [],
+    "notes": "建议和 ResetEra、媒体报道、官方新闻交叉阅读。",
+    "sources": [
+      "https://www.neogaf.com/"
+    ],
+    "last_checked": "2026-06-22"
+  }
+]
