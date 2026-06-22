@@ -1,11 +1,12 @@
-﻿import fs from 'node:fs';
+import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '..');
 const outputDir = path.join(repoRoot, '_site');
-const siteBase = '/small-forums-list/';
+const siteBase = '/';
+const siteOrigin = 'https://forums.cc.cd';
 const repo = 'Amiyadesi/small-forums-list';
 const repoId = 'R_kgDOTBXYcA';
 const giscusCategory = 'General';
@@ -106,7 +107,7 @@ function renderShell({ title, description, body, canonicalPath = siteBase }) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(fullTitle)}</title>
   <meta name="description" content="${escapeHtml(description)}">
-  <link rel="canonical" href="https://amiyadesi.github.io${canonicalPath}">
+  <link rel="canonical" href="${siteOrigin}${canonicalPath}">
   <link rel="stylesheet" href="${siteBase}assets/styles.css">
 </head>
 <body>
@@ -432,6 +433,7 @@ for (const community of communities) {
   writeFile(path.join('communities', community.slug, 'index.html'), renderCommunityPage(community));
 }
 writeFile('communities.json', JSON.stringify(communities.map(({ slug, ...item }) => ({ slug, ...item })), null, 2) + '\n');
+writeFile('CNAME', 'forums.cc.cd\n');
 writeFile('.nojekyll', '');
 
 console.log(`Built ${communities.length} community pages in ${outputDir}`);

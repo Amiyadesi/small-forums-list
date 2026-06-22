@@ -62,7 +62,7 @@ const body = [
   '## 在线页面',
   '',
   '- GitHub 仓库：https://github.com/Amiyadesi/small-forums-list',
-  '- GitHub Pages：https://amiyadesi.github.io/small-forums-list/',
+  '- GitHub Pages：https://forums.cc.cd/',
   '- 每个社区会生成独立页面，并在页面底部使用 Giscus 接 GitHub Discussions 评论。',
   '',
   '## 数据文件',
