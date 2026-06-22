@@ -60,6 +60,39 @@
     "last_checked": "2026-06-22"
   },
   {
+    "name": "类脑 / ΟΔΥΣΣΕΙΑ",
+    "aliases": [
+      "类脑",
+      "Odysseia"
+    ],
+    "url": "https://discord.gg/odysseia",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "tech_ai_dev",
+    "tags": [
+      "ai",
+      "sillytavern",
+      "roleplay",
+      "discord"
+    ],
+    "registration": "以 Discord 邀请和服务器当前验证规则为准；公开资料提到类脑可能关闭邀请，加入后通常需要阅读规则、完成验证或答题。",
+    "vibe": "根据公开教程、入口页和圈内说法，类脑是中文 AI 酒馆/SillyTavern 方向的圈内社区，重点不是普通聊天水群，而是围绕酒馆玩法、角色卡、预设、插件、模型/API 和提示词经验交流。",
+    "benefits": "适合看 SillyTavern 入门资料、酒馆配置经验、角色卡和预设讨论、模型/API 使用反馈、插件工具和 AI 角色扮演相关生态。对刚接触酒馆的人来说，它更像一个资料入口和问路点。",
+    "risks": [
+      "注册门槛/邀请制",
+      "成人内容边界",
+      "版权/角色卡内容",
+      "入口不稳定"
+    ],
+    "notes": "这是 Discord 服务器形态，不是传统论坛；入口、频道结构和验证门槛可能变化很快。酒馆/角色扮演社区常会混有 NSFW、版权角色、越狱提示词、第三方 API 和下载链接，参与前需要自己判断内容边界和账号安全。不要把来路不明的预设、插件或 API Key 配置直接用于主账号。",
+    "sources": [
+      "https://discord.gg/odysseia",
+      "https://www.erocraft.com/docs/sillytavern/11-resources"
+    ],
+    "last_checked": "2026-06-22"
+  },
+  {
     "name": "NodeLoc",
     "aliases": [
       "NL"

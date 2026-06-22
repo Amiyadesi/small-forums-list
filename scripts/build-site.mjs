@@ -41,7 +41,8 @@ const slugOverrides = {
   '南+ / Level Plus': 'south-plus-level-plus',
   '草榴社区': 'caoliu',
   '富贵论坛': 'fglt',
-  '福利吧论坛': 'fuliba'
+  '福利吧论坛': 'fuliba',
+  '类脑 / ΟΔΥΣΣΕΙΑ': 'odysseia'
 };
 
 function ensureCleanDir(dir) {

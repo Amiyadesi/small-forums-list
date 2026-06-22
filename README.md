@@ -23,13 +23,13 @@
 - [`data/communities.json`](data/communities.json)：结构化条目，适合后续生成网站或表格。
 - [`docs/categories.md`](docs/categories.md)：分类、收录边界和维护规则。
 
-首版共收录 48 个社区，最后人工核验日期统一为 `2026-06-22`。
+首版共收录 49 个社区，最后人工核验日期统一为 `2026-06-22`。
 
 ## 分类速览
 
 | 分类 | 社区 |
 | --- | --- |
-| 技术 / AI / 开发者 | Linux.do, V2EX, Lobsters, Tildes |
+| 技术 / AI / 开发者 | Linux.do, V2EX, 类脑 / ΟΔΥΣΣΕΙΑ, Lobsters, Tildes |
 | 主机 / VPS / 站长 / 独立站 | NodeLoc, NodeSeek, 奶昔论坛, HostLoc, 大佬论坛, LowEndTalk, LowEndSpirit, WebHostingTalk, NamePros, OpenWrt Forum, 恩山无线论坛, 萌国萌站广场 |
 | 搜索 / 资源 / 知识工具 | 虫部落 |
 | 安全 / 逆向 / 系统 / 软件 | 吾爱破解, 看雪论坛, T00ls, 卡饭论坛, 远景论坛, 无忧启动论坛, XDA Forums |
@@ -58,6 +58,16 @@
 - 适合看/里面有什么：适合观察程序员日常、产品想法、效率工具、独立开发和远程工作话题。
 - 注意：信息面广，但观点质量依主题而变。涉及交易、招聘和账号服务时需要自行核验。
 - 来源：https://www.v2ex.com/
+- 核验：2026-06-22
+
+### 类脑 / ΟΔΥΣΣΕΙΑ
+
+- 入口：https://discord.gg/odysseia
+- 定位/氛围：根据公开教程、入口页和圈内说法，类脑是中文 AI 酒馆/SillyTavern 方向的圈内社区，重点不是普通聊天水群，而是围绕酒馆玩法、角色卡、预设、插件、模型/API 和提示词经验交流。
+- 注册：以 Discord 邀请和服务器当前验证规则为准；公开资料提到类脑可能关闭邀请，加入后通常需要阅读规则、完成验证或答题。
+- 适合看/里面有什么：适合看 SillyTavern 入门资料、酒馆配置经验、角色卡和预设讨论、模型/API 使用反馈、插件工具和 AI 角色扮演相关生态。对刚接触酒馆的人来说，它更像一个资料入口和问路点。
+- 注意：这是 Discord 服务器形态，不是传统论坛；入口、频道结构和验证门槛可能变化很快。酒馆/角色扮演社区常会混有 NSFW、版权角色、越狱提示词、第三方 API 和下载链接，参与前需要自己判断内容边界和账号安全。不要把来路不明的预设、插件或 API Key 配置直接用于主账号。
+- 来源：https://discord.gg/odysseia、https://www.erocraft.com/docs/sillytavern/11-resources
 - 核验：2026-06-22
 
 ### Lobsters
