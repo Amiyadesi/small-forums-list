@@ -15,17 +15,19 @@
       "tools",
       "public_good"
     ],
-    "registration": "当前以站内规则和邀请/认证通道为准；新人需要阅读规则并完成基础任务后再发言。",
-    "vibe": "节奏很快的中文技术社区，AI、部署、Cloudflare、公益站和工具情报密度高，规则也比普通论坛严格。",
-    "benefits": "能看到不少 AI 公益站、模型/工具讨论、部署教程、福利羊毛和长篇共建文档。",
+    "registration": "当前以站内规则和邀请/认证通道为准；新人建议先读 guidelines，完成 bot 新手任务，确认升到 1 级再发言。GitHub 5 年及以上老账号曾可走 invite.linuxdo.org 认证通道，具体以官方页面为准。",
+    "vibe": "根据我的实地体验，Linux.do 是节奏很快的中文技术/AI 社区：AI、部署、Cloudflare、VPS、域名、公益站、工具情报和日常茶馆混在一起，信息密度高，规则也比普通论坛严格。",
+    "benefits": "适合看 AI 公益站列表、模型/工具讨论、Cloudflare/VPS/域名部署教程、福利羊毛、开发调优、文档共建、搞七捻三日常贴，以及 credit.linux.do 等社区积分/服务玩法。",
     "risks": [
       "注册门槛/邀请制",
       "交易/商家信息"
     ],
-    "notes": "适合先只读一段时间。不要购买来路不明的邀请码，也不要把短期羊毛当成长期服务。",
+    "notes": "新人期建议先只读、做新手任务、熟读站规，尤其注意站内对抽奖、广告和交易内容的要求。常见经验是先升到 1 级，长期活跃到 2 级会更稳；涉及广告、交易或金钱相关内容时按站内分组和规则处理。不要购买来路不明的邀请码，也不要把短期羊毛当长期服务。",
     "sources": [
       "https://linux.do/",
-      "https://linux.do/guidelines"
+      "https://linux.do/guidelines",
+      "https://invite.linuxdo.org/",
+      "https://credit.linux.do/"
     ],
     "last_checked": "2026-06-22"
   },
@@ -73,17 +75,18 @@
       "node",
       "life"
     ],
-    "registration": "常见为邀请码注册，具体以站内邀请页面和公告为准。",
-    "vibe": "自由、平等、友好、开放、有趣的技术生活混合社区，比老牌主机论坛更轻一点。",
-    "benefits": "能看到 VPS、网络、AI、域名、SIM 卡和生活类子论坛，也有电池等社区积分玩法。",
+    "registration": "当前常见为邀请码注册，具体以站内邀请页面和公告为准。",
+    "vibe": "根据我的体验，NodeLoc 比 Linux.do 松一些，自我定位是自由、平等、友好、开放、有趣；规则以少数底线为主，回帖没有明显字数压力，站长也比较活跃。",
+    "benefits": "适合看 VPS、网络、AI、域名、SIM 卡、生活日常、运动等子论坛；用户可以创建和加入子论坛；电池积分可通过签到和参与社区获得，也会围绕社区内服务流通。",
     "risks": [
       "注册门槛/邀请制",
       "交易/商家信息"
     ],
-    "notes": "讨论比较自由，回复质量也会更参差。新人适合先看站规和热门帖再参与交易。",
+    "notes": "和 Linux.do 的差异是更自由、允许公开 AFF，回复质量也会更参差。适合先看 about、热门帖和交易区规则，再参与商家、AFF 或交易话题。",
     "sources": [
       "https://www.nodeloc.com/",
-      "https://www.nodeloc.com/about"
+      "https://www.nodeloc.com/about",
+      "https://www.nodeloc.com/t/topic/94649"
     ],
     "last_checked": "2026-06-22"
   },
@@ -108,7 +111,7 @@
       "注册门槛/邀请制",
       "交易/商家信息"
     ],
-    "notes": "不要只看单个帖子就下单买机器，最好交叉看多站反馈和官方条款。",
+    "notes": "NodeSeek 和奶昔论坛不是同一个站，不要把奶昔当成 NodeSeek 的别名。主机、节点和商家活动类信息最好交叉看多站反馈和官方条款。",
     "sources": [
       "https://www.nodeseek.com/",
       "https://nodeseek.cc/"
@@ -1074,9 +1077,12 @@
     "last_checked": "2026-06-22"
   },
   {
-    "name": "南+",
+    "name": "南+ / Level Plus",
     "aliases": [
-      "South Plus"
+      "South Plus",
+      "北+",
+      "North Plus",
+      "Level Plus"
     ],
     "url": "https://www.south-plus.net/",
     "language": [
@@ -1089,9 +1095,9 @@
       "resource",
       "traditional-forum"
     ],
-    "registration": "注册、访问和域名状态变化较多，以站点当前可访问页面为准。",
-    "vibe": "成人向、ACG 向、资源向传统论坛，靠版块、积分和长期用户维持运转。",
-    "benefits": "常见内容包括成人 ACG、同人、游戏、图文、资源索引、求物、茶馆和积分权限相关讨论。",
+    "registration": "注册、访问和域名状态变化较多，以站点当前可访问页面为准。South Plus 与 Level Plus / 北+ 相关入口按同一类社区样本合并记录。",
+    "vibe": "成人向、ACG 向、资源向传统论坛，同一文化脉络下常见南+、北+、Level Plus 等称呼，靠版块、积分、求物和长期用户维持运转。",
+    "benefits": "常见内容包括成人 ACG、同人、游戏、图文、资源索引、求物、茶馆、积分权限、游戏/同人讨论和社区杂谈。",
     "risks": [
       "18+",
       "版权敏感",
@@ -1099,41 +1105,9 @@
       "钓鱼/恶意下载",
       "隐私侵害"
     ],
-    "notes": "可观察传统论坛、积分和资源型社群运营；主要风险是侵权转载、未授权成人内容、诱导下载和域名仿冒。不提供资源获取、绕过访问或最新地址教程。",
+    "notes": "主要风险是 18+ 内容、侵权转载、未授权成人内容、仿冒域名、不可信下载、隐私侵害和擦边/灰色推广。这里仅记录社区形态和常见内容类型，不维护最新地址、绕过访问或资源获取步骤。",
     "sources": [
-      "https://www.south-plus.net/"
-    ],
-    "last_checked": "2026-06-22"
-  },
-  {
-    "name": "Level Plus",
-    "aliases": [
-      "北+",
-      "North Plus"
-    ],
-    "url": "https://level-plus.net/",
-    "language": [
-      "zh-CN"
-    ],
-    "category": "adult_resource_gray",
-    "tags": [
-      "adult",
-      "acg",
-      "resource",
-      "traditional-forum"
-    ],
-    "registration": "注册和访问方式以站点当前页面为准。",
-    "vibe": "与南+文化相近的成人/ACG/资源向论坛样本。",
-    "benefits": "常见内容包括成人 ACG、资源索引、游戏/同人讨论、求物和社区茶馆。",
-    "risks": [
-      "18+",
-      "版权敏感",
-      "入口不稳定",
-      "钓鱼/恶意下载",
-      "隐私侵害"
-    ],
-    "notes": "重点风险是侵权资源、成人内容边界、仿冒域名和不可信下载。不提供资源下载指引。",
-    "sources": [
+      "https://www.south-plus.net/",
       "https://level-plus.net/"
     ],
     "last_checked": "2026-06-22"
