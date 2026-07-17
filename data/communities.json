@@ -944,6 +944,33 @@
     "last_checked": "2026-06-22"
   },
   {
+    "name": "其乐",
+    "aliases": [
+      "Keylol"
+    ],
+    "url": "https://keylol.com/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "acg_game_niche",
+    "tags": [
+      "steam",
+      "game",
+      "discussion"
+    ],
+    "registration": "普通账号注册，遵守站点规则。",
+    "vibe": "作为民间站点，自 2004 年起为广大中文 Steam 用户提供技术支持与讨论空间，历经二十余载风雨，如今已发展为国内最大的正版玩家据点，站内水贴少，内容纯粹。",
+    "benefits": "适合看最新最快的 Steam 史低、限免、慈善包信息；各大平台游戏讨论评测；UsbEAm、Watt Toolkit 等脚本、插件、工具；赠楼、分享互赠游戏。",
+    "risks": [
+      "交易/商家信息"
+    ],
+    "notes": "作为偏剁手向的正版社区，尽可能不要讨论或求盗版资源。",
+    "sources": [
+      "https://keylol.com/"
+    ],
+    "last_checked": "2026-07-17"
+  },
+  {
     "name": "Chiphell",
     "aliases": [
       "CHH"

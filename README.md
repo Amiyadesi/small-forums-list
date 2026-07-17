@@ -23,7 +23,7 @@
 - [`data/communities.json`](data/communities.json)：结构化条目，适合后续生成网站或表格。
 - [`docs/categories.md`](docs/categories.md)：分类、收录边界和维护规则。
 
-首版共收录 49 个社区，最后人工核验日期统一为 `2026-06-22`。
+首版共收录 50 个社区，最后人工核验日期统一为 `2026-07-17`。
 
 ## 分类速览
 
@@ -33,7 +33,7 @@
 | 主机 / VPS / 站长 / 独立站 | NodeLoc, NodeSeek, 奶昔论坛, HostLoc, 大佬论坛, LowEndTalk, LowEndSpirit, WebHostingTalk, NamePros, OpenWrt Forum, 恩山无线论坛, 萌国萌站广场 |
 | 搜索 / 资源 / 知识工具 | 虫部落 |
 | 安全 / 逆向 / 系统 / 软件 | 吾爱破解, 看雪论坛, T00ls, 卡饭论坛, 远景论坛, 无忧启动论坛, XDA Forums |
-| ACG / 游戏 / 小圈子 | Bangumi, Doki Chinese Club, Stage1st, A9VG, TGFC, 天使动漫论坛, MineBBS, VNDB Forums |
+| ACG / 游戏 / 小圈子 | Bangumi, Doki Chinese Club, Stage1st, A9VG, TGFC, 天使动漫论坛, MineBBS, VNDB Forums, 其乐 |
 | 硬件 / 电子 / Homelab | Chiphell, 数码之家, Level1Techs Forum, EEVblog Forum, ServeTheHome Forums, Overclock.net |
 | 成人 / 资源 / 灰区 | 南+ / Level Plus, 草榴社区, ZodGame, 富贵论坛, 福利吧论坛 |
 | 海外老论坛 / 泛兴趣 | Something Awful Forums, MetaFilter, Ars OpenForum, ResetEra, NeoGAF |
@@ -377,6 +377,16 @@
 - 注意：视觉小说内容可能包含成人主题，浏览前注意年龄和地区规则。
 - 来源：https://vndb.org/、https://vndb.org/t
 - 核验：2026-06-22
+
+### 其乐
+
+- 入口：https://keylol.com/
+- 定位/氛围：作为民间站点，自 2004 年起为广大中文 Steam 用户提供技术支持与讨论空间，历经二十余载风雨，如今已发展为国内最大的正版玩家据点，站内水贴少，内容纯粹。
+- 注册：普通账号注册，遵守站点规则。
+- 适合看/里面有什么：适合看最新最快的 Steam 史低、限免、慈善包信息；各大平台游戏讨论评测；UsbEAm、Watt Toolkit 等脚本、插件、工具；赠楼、分享互赠游戏。
+- 注意：作为偏剁手向的正版社区，尽可能不要讨论或求盗版资源。
+- 来源：https://keylol.com/
+- 核验：2026-07-17
 
 ## 硬件 / 电子 / Homelab
 
