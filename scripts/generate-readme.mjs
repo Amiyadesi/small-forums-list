@@ -3,20 +3,9 @@ import path from 'node:path';
 
 const repoRoot = process.cwd();
 const dataPath = path.join(repoRoot, 'data', 'communities.json');
+const categoriesPath = path.join(repoRoot, 'data', 'categories.json');
 const communities = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-
-const categories = [
-  ['tech_ai_dev', '技术 / AI / 开发者'],
-  ['host_webmaster', '主机 / VPS / 站长 / 独立站'],
-  ['search_resource_tools', '搜索 / 资源 / 知识工具'],
-  ['security_system_software', '安全 / 逆向 / 系统 / 软件'],
-  ['acg_game_niche', 'ACG / 游戏 / 小圈子'],
-  ['hardware_homelab', '硬件 / 电子 / Homelab'],
-  ['adult_resource_gray', '成人 / 资源 / 灰区'],
-  ['overseas_old_forum', '海外老论坛 / 泛兴趣']
-];
-
-const categoryNames = Object.fromEntries(categories);
+const categories = JSON.parse(fs.readFileSync(categoriesPath, 'utf8'));
 
 function escapeMarkdownText(value) {
   return String(value).replace(/\|/g, '\\|');
@@ -39,7 +28,7 @@ function itemToMarkdown(item) {
 }
 
 const latestChecked = communities.reduce((latest, item) => item.last_checked > latest ? item.last_checked : latest, '');
-const summaryRows = categories.map(([id, name]) => {
+const summaryRows = categories.map(({ id, name }) => {
   const names = communities.filter((item) => item.category === id).map((item) => item.name).join(', ');
   return `| ${name} | ${escapeMarkdownText(names)} |`;
 });
@@ -68,9 +57,10 @@ const body = [
   '## 数据文件',
   '',
   '- [`data/communities.json`](data/communities.json)：结构化条目，适合后续生成网站或表格。',
+  '- [`data/categories.json`](data/categories.json)：分类名称、顺序和边界说明的唯一数据源。',
   '- [`docs/categories.md`](docs/categories.md)：分类、收录边界和维护规则。',
   '',
-  `首版共收录 ${communities.length} 个社区，最后人工核验日期统一为 \`${latestChecked}\`。`,
+  `目前共收录 ${communities.length} 个社区，最近核验日期为 \`${latestChecked}\`。`,
   '',
   '## 分类速览',
   '',
@@ -78,10 +68,10 @@ const body = [
   '| --- | --- |',
   ...summaryRows,
   '',
-  ...categories.flatMap(([id, name]) => {
+  ...categories.flatMap(({ id, name }) => {
     const items = communities.filter((item) => item.category === id);
     if (!items.length) return [];
-    const intro = id === 'adult_resource_gray'
+    const intro = id === 'adult_gray'
       ? ['这一类只作为社区形态观察。会写里面常见的内容类型、18+ 属性和可能混杂的灰色内容，但不要把这里当成推荐列表。', '']
       : [];
     return [`## ${name}`, '', ...intro, ...items.flatMap((item, index) => [itemToMarkdown(item), ...(index === items.length - 1 ? [] : [''])]), ''];
@@ -91,8 +81,8 @@ const body = [
   '新增社区时请同时更新：',
   '',
   '1. `data/communities.json`',
-  '2. 运行 `node scripts/generate-readme.mjs` 同步 README',
-  '3. 必要时更新 `docs/categories.md`',
+  '2. 新分类或分类边界变化时同步 `data/categories.json` 与 `docs/categories.md`',
+  '3. 运行 `node scripts/generate-readme.mjs` 同步 README',
   '4. 运行 `node scripts/build-site.mjs` 预览生成页面',
   '',
   '条目描述尽量写清楚：入口、社区氛围、主要内容、注册门槛、价值、注意事项、来源和核验日期。灰区社区可以写内容类型，但不要写操作教程、交易路径或绕过方法。',

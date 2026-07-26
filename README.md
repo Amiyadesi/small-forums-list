@@ -21,24 +21,26 @@
 ## 数据文件
 
 - [`data/communities.json`](data/communities.json)：结构化条目，适合后续生成网站或表格。
+- [`data/categories.json`](data/categories.json)：分类名称、顺序和边界说明的唯一数据源。
 - [`docs/categories.md`](docs/categories.md)：分类、收录边界和维护规则。
 
-首版共收录 50 个社区，最后人工核验日期统一为 `2026-07-17`。
+目前共收录 62 个社区，最近核验日期为 `2026-07-26`。
 
 ## 分类速览
 
 | 分类 | 社区 |
 | --- | --- |
-| 技术 / AI / 开发者 | Linux.do, V2EX, 类脑 / ΟΔΥΣΣΕΙΑ, Lobsters, Tildes |
-| 主机 / VPS / 站长 / 独立站 | NodeLoc, NodeSeek, 奶昔论坛, HostLoc, 大佬论坛, LowEndTalk, LowEndSpirit, WebHostingTalk, NamePros, OpenWrt Forum, 恩山无线论坛, 萌国萌站广场 |
-| 搜索 / 资源 / 知识工具 | 虫部落 |
-| 安全 / 逆向 / 系统 / 软件 | 吾爱破解, 看雪论坛, T00ls, 卡饭论坛, 远景论坛, 无忧启动论坛, XDA Forums |
-| ACG / 游戏 / 小圈子 | Bangumi, Doki Chinese Club, Stage1st, A9VG, TGFC, 天使动漫论坛, MineBBS, VNDB Forums, 其乐 |
-| 硬件 / 电子 / Homelab | Chiphell, 数码之家, Level1Techs Forum, EEVblog Forum, ServeTheHome Forums, Overclock.net |
+| 开发 / AI / 开源 | Linux.do, V2EX, 类脑 / ΟΔΥΣΣΕΙΑ, Lobsters, Ars OpenForum, Emacs China, Ruby China |
+| 主机 / 网络 / 运维 | NodeLoc, NodeSeek, 奶昔论坛, HostLoc, LowEndTalk, LowEndSpirit, WebHostingTalk, OpenWrt Forum, 恩山无线论坛 |
+| 站长 / 独立网站 | 大佬论坛, NamePros, 萌国萌站广场, MelonLand Forum |
+| 知识 / 搜索 / 数据工具 | 虫部落, OpenStreetMap Community Forum |
+| 安全 / 系统 / 软件 | 吾爱破解, 看雪论坛, T00ls, 卡饭论坛, 远景论坛, 无忧启动论坛, XDA Forums, Arch Linux 中文论坛, OSDev.org Forum |
+| 游戏 / ACG / 同人 | Bangumi, Doki Chinese Club, Stage1st, A9VG, TGFC, 天使动漫论坛, MineBBS, VNDB Forums, 其乐, ResetEra, NeoGAF, Doomworld Forums |
+| 硬件 / 电子 / 创客 | Chiphell, 数码之家, Level1Techs Forum, EEVblog Forum, ServeTheHome Forums, Overclock.net, VOGONS, Badcaps Electronics Repair Forum, diyAudio |
+| 文化 / 兴趣 / 慢社交 | Tildes, Something Awful Forums, MetaFilter, Cloudy Nights, Fountain Pen Network |
 | 成人 / 资源 / 灰区 | 南+ / Level Plus, 草榴社区, ZodGame, 富贵论坛, 福利吧论坛 |
-| 海外老论坛 / 泛兴趣 | Something Awful Forums, MetaFilter, Ars OpenForum, ResetEra, NeoGAF |
 
-## 技术 / AI / 开发者
+## 开发 / AI / 开源
 
 ### Linux.do
 
@@ -80,17 +82,37 @@
 - 来源：https://lobste.rs/about、https://lobste.rs/
 - 核验：2026-06-22
 
-### Tildes
+### Ars OpenForum
 
-- 入口：https://tildes.net/
-- 定位/氛围：强调慢讨论和社区治理的英文社区，风格不像信息流平台。
-- 注册：邀请制为主，开放情况以官方公告为准。
-- 适合看/里面有什么：适合看技术、文化、科学、生活等主题的长讨论。
-- 注意：更适合愿意读长帖和遵守讨论规范的人。
-- 来源：https://tildes.net/、https://docs.tildes.net/
+- 入口：https://arstechnica.com/civis/
+- 定位/氛围：Ars Technica 旗下的老牌技术讨论论坛，偏科技、科学、硬件和政策。
+- 注册：普通账号注册，发帖以 Ars Technica 社区规则为准。
+- 适合看/里面有什么：适合看英文技术媒体读者社区的长讨论。
+- 注意：更像媒体社区和论坛文化的混合体。
+- 来源：https://arstechnica.com/civis/
 - 核验：2026-06-22
 
-## 主机 / VPS / 站长 / 独立站
+### Emacs China
+
+- 入口：https://emacs-china.org/
+- 定位/氛围：中文 Emacs / Lisp 用户社区，长期讨论编辑器配置、Org mode、编程语言和自由软件，规模不大但旧帖积累很深。
+- 注册：开放邮件注册；若收不到激活邮件，官网会提示通过公开 QQ 群联系管理员处理。
+- 适合看/里面有什么：适合查 Emacs 配置疑难、Elisp 实践、Org mode 工作流、输入法与中文环境问题，也能看到不少编辑器文化讨论。
+- 注意：提问前建议先搜索旧帖并提供可复现配置；这里更适合具体技术问题，不是泛软件推荐区。
+- 来源：https://emacs-china.org/、https://emacs-china.org/tos
+- 核验：2026-07-26
+
+### Ruby China
+
+- 入口：https://ruby-china.org/
+- 定位/氛围：围绕 Ruby、Rails 和中文开发者生态形成的老牌社区，节奏比综合技术论坛慢，技术档案价值高。
+- 注册：开放注册，需要用户名、Email、密码和页面验证码。
+- 适合看/里面有什么：适合查 Ruby/Rails 实战问题、工程经验、开源项目、招聘和历年中文社区活动资料。
+- 注意：部分旧帖对应的依赖版本已经过时，照做前应核对 Ruby、Rails 和 gem 的当前文档。
+- 来源：https://ruby-china.org/、https://ruby-china.org/account/sign_up
+- 核验：2026-07-26
+
+## 主机 / 网络 / 运维
 
 ### NodeLoc
 
@@ -132,16 +154,6 @@
 - 来源：https://hostloc.com/forum.php
 - 核验：2026-06-22
 
-### 大佬论坛
-
-- 入口：https://www.dalao.net/
-- 定位/氛围：小众域名和站长论坛，总能看到奇奇怪怪的域名、域名行情和站长日常。
-- 注册：普通注册和交易权限以站内当前规则为准。
-- 适合看/里面有什么：适合看域名交易、域名投资、国别域名、顶级域名、主机服务器和站长资源讨论。
-- 注意：把它当域名玩家和站长交流入口，不要把论坛估值或成交帖当确定收益。
-- 来源：https://www.dalao.net/、https://www.dalao.net/about.htm、https://www.dalao.net/map.htm
-- 核验：2026-06-22
-
 ### LowEndTalk
 
 - 入口：https://lowendtalk.com/
@@ -172,16 +184,6 @@
 - 来源：https://www.webhostingtalk.com/
 - 核验：2026-06-22
 
-### NamePros
-
-- 入口：https://www.namepros.com/
-- 定位/氛围：域名投资和交易社区，英文域名圈的讨论、估值和市场信息很多。
-- 注册：普通账号注册，域名交易和拍卖需遵守站内规则。
-- 适合看/里面有什么：适合观察域名买卖、估值思路、注册商和争议案例。
-- 注意：域名交易容易高估价值，新人不要把论坛估值当作确定收益。
-- 来源：https://www.namepros.com/
-- 核验：2026-06-22
-
 ### OpenWrt Forum
 
 - 入口：https://forum.openwrt.org/
@@ -202,6 +204,28 @@
 - 来源：https://www.right.com.cn/forum/index.php
 - 核验：2026-06-22
 
+## 站长 / 独立网站
+
+### 大佬论坛
+
+- 入口：https://www.dalao.net/
+- 定位/氛围：小众域名和站长论坛，总能看到奇奇怪怪的域名、域名行情和站长日常。
+- 注册：普通注册和交易权限以站内当前规则为准。
+- 适合看/里面有什么：适合看域名交易、域名投资、国别域名、顶级域名、主机服务器和站长资源讨论。
+- 注意：把它当域名玩家和站长交流入口，不要把论坛估值或成交帖当确定收益。
+- 来源：https://www.dalao.net/、https://www.dalao.net/about.htm、https://www.dalao.net/map.htm
+- 核验：2026-06-22
+
+### NamePros
+
+- 入口：https://www.namepros.com/
+- 定位/氛围：域名投资和交易社区，英文域名圈的讨论、估值和市场信息很多。
+- 注册：普通账号注册，域名交易和拍卖需遵守站内规则。
+- 适合看/里面有什么：适合观察域名买卖、估值思路、注册商和争议案例。
+- 注意：域名交易容易高估价值，新人不要把论坛估值当作确定收益。
+- 来源：https://www.namepros.com/
+- 核验：2026-06-22
+
 ### 萌国萌站广场
 
 - 入口：https://icp.gov.moe/aboutus.php
@@ -212,7 +236,17 @@
 - 来源：https://icp.gov.moe/、https://icp.gov.moe/aboutus.php、https://icp.gov.moe/join.php
 - 核验：2026-06-22
 
-## 搜索 / 资源 / 知识工具
+### MelonLand Forum
+
+- 入口：https://forum.melonland.net/
+- 定位/氛围：围绕个人主页、手写网页、Web 艺术和旧互联网文化形成的英文社区，创作导向强，刻意远离平台化社交节奏。
+- 注册：开放账号注册；加入前建议先读 forum help 和社区 guidelines。
+- 适合看/里面有什么：适合找个人网站灵感、HTML/CSS 实践、webring、网页收藏、数字花园和复古 Web 文化讨论。
+- 注意：论坛每周一会按社区机制关闭，不代表站点故障；发帖前应尊重其反增长、重个人表达的语境。
+- 来源：https://forum.melonland.net/、https://wiki.melonland.net/guidelines、https://wiki.melonland.net/forum_help
+- 核验：2026-07-26
+
+## 知识 / 搜索 / 数据工具
 
 ### 虫部落
 
@@ -224,7 +258,17 @@
 - 来源：https://www.chongbuluo.com/、https://search.chongbuluo.com/、https://www.chongbuluo.com/thread-7484-1-1.html
 - 核验：2026-06-22
 
-## 安全 / 逆向 / 系统 / 软件
+### OpenStreetMap Community Forum
+
+- 入口：https://community.openstreetmap.org/
+- 定位/氛围：OpenStreetMap 的官方社区论坛，涵盖制图、标签规范、数据使用、编辑器、地区项目和社区治理，并设有多语言分区。
+- 注册：使用 OpenStreetMap 账号通过 OAuth 登录；没有 OSM 账号时需先在主站注册。
+- 适合看/里面有什么：适合查地图编辑争议、tagging 方案、导入与数据质量、工具开发、本地社群和开放地理数据实践。
+- 注意：编辑真实地点或发布轨迹时注意个人与敏感设施信息；大规模导入、机械编辑前应先遵守 OSM 社区流程。
+- 来源：https://community.openstreetmap.org/、https://community.openstreetmap.org/t/how-to-use-this-forum-for-new-users/314、https://community.openstreetmap.org/signup
+- 核验：2026-07-26
+
+## 安全 / 系统 / 软件
 
 ### 吾爱破解
 
@@ -296,7 +340,27 @@
 - 来源：https://xdaforums.com/
 - 核验：2026-06-22
 
-## ACG / 游戏 / 小圈子
+### Arch Linux 中文论坛
+
+- 入口：https://forum.archlinuxcn.org/
+- 定位/氛围：Arch Linux 中文用户的技术论坛，问题通常围绕安装、软件包、桌面环境、驱动和系统维护，强调先查文档。
+- 注册：论坛现使用 Discourse，开放 Email 账号注册。
+- 适合看/里面有什么：适合查中文 Arch 使用经验、archlinuxcn 仓库相关问题、滚动更新故障和本地化配置。
+- 注意：论坛于 2026 年迁移到 Discourse。执行磁盘、引导或包管理命令前，应先理解命令并保留备份。
+- 来源：https://forum.archlinuxcn.org/、https://forum.archlinuxcn.org/signup
+- 核验：2026-07-26
+
+### OSDev.org Forum
+
+- 入口：https://forum.osdev.org/
+- 定位/氛围：专注自制操作系统、内核、引导、编译器和底层架构的英文老论坛，技术门槛高，重视资料检索和最小复现。
+- 注册：开放论坛账号注册，需同意站点条款并完成页面验证。
+- 适合看/里面有什么：适合查 x86/ARM 启动、内存管理、文件系统、驱动、工具链和 OS 设计理论。
+- 注意：先读 OSDev Wiki 和论坛置顶资料。只描述目标而没有代码、日志或已查资料，通常很难得到有效回复。
+- 来源：https://forum.osdev.org/、https://forum.osdev.org/ucp.php?mode=register
+- 核验：2026-07-26
+
+## 游戏 / ACG / 同人
 
 ### Bangumi
 
@@ -388,7 +452,37 @@
 - 来源：https://keylol.com/
 - 核验：2026-07-17
 
-## 硬件 / 电子 / Homelab
+### ResetEra
+
+- 入口：https://www.resetera.com/
+- 定位/氛围：英文游戏和泛文化讨论论坛，承接了一部分传统游戏论坛用户。
+- 注册：注册和邮箱要求以站点当前规则为准。
+- 适合看/里面有什么：适合看海外游戏业界新闻、玩家观点和长线讨论。
+- 注意：话题和管理风格有明显社区立场，阅读时要带着语境判断。
+- 来源：https://www.resetera.com/
+- 核验：2026-06-22
+
+### NeoGAF
+
+- 入口：https://www.neogaf.com/
+- 定位/氛围：英文游戏论坛老名字，和 ResetEra 的历史关系常被放在一起讨论。
+- 注册：注册和发帖限制以站点当前规则为准。
+- 适合看/里面有什么：适合观察海外游戏论坛文化、业界新闻传播和老社区变迁。
+- 注意：建议和 ResetEra、媒体报道、官方新闻交叉阅读。
+- 来源：https://www.neogaf.com/
+- 核验：2026-06-22
+
+### Doomworld Forums
+
+- 入口：https://www.doomworld.com/forum/
+- 定位/氛围：围绕 Doom 系列、WAD、地图、MOD、源端口和速通延续至今的老牌英文社区，创作与档案密度都很高。
+- 注册：开放账号注册，需要 Email、显示名、密码和页面安全验证。
+- 适合看/里面有什么：适合找地图制作教程、MOD 发布、引擎开发、赛事、速通和几十年积累的 Doom 社区史料。
+- 注意：下载 WAD、MOD 或工具时核验发布帖和作者来源；发作品前先阅读对应板块的格式与反馈规则。
+- 来源：https://www.doomworld.com/forum/、https://www.doomworld.com/register/
+- 核验：2026-07-26
+
+## 硬件 / 电子 / 创客
 
 ### Chiphell
 
@@ -450,6 +544,88 @@
 - 来源：https://www.overclock.net/
 - 核验：2026-06-22
 
+### VOGONS
+
+- 入口：https://www.vogons.org/
+- 定位/氛围：围绕 DOS、旧版 Windows、模拟器、老游戏兼容和复古 PC 硬件形成的英文技术论坛，资料跨度很长。
+- 注册：开放论坛账号注册，需同意条款并完成页面验证。
+- 适合看/里面有什么：适合查声卡、显卡、主板、驱动、DOSBox、旧游戏兼容和复古装机经验。
+- 注意：旧帖里的下载链接和驱动来源可能已经失效或被替换，安装前应核验文件来源并做好隔离与备份。
+- 来源：https://www.vogons.org/、https://www.vogons.org/ucp.php?mode=register
+- 核验：2026-07-26
+
+### Badcaps Electronics Repair Forum
+
+- 入口：https://www.badcaps.net/
+- 定位/氛围：偏实战的电子维修论坛，常见主板、电源、显示器、BIOS、板图和原理图讨论，专业维修从业者较多。
+- 注册：开放论坛账号注册；下载附件和参与讨论通常需要登录，并应按版规提供设备型号与测量信息。
+- 适合看/里面有什么：适合查故障案例、元件测量、板级维修思路、BIOS 问题和维修资料线索。
+- 注意：高压电源和带电测量可能致伤；刷写 BIOS 或使用板图前应确认精确板号、备份原固件，并遵守资料版权要求。
+- 来源：https://www.badcaps.net/、https://www.badcaps.net/forum/welcome-to-the-badcaps-net-tech-forum/frequently-asked-questions-no-posting
+- 核验：2026-07-26
+
+### diyAudio
+
+- 入口：https://www.diyaudio.com/community/
+- 定位/氛围：大型但高度垂直的音频 DIY 社区，讨论扬声器、功放、模拟/数字电路、测量和项目制作，工程派与发烧友并存。
+- 注册：开放社区账号注册，发帖和交易区权限以当前版规与账号状态为准。
+- 适合看/里面有什么：适合查箱体设计、分频、放大器拓扑、DAC、测量方法、元件替代和长期项目记录。
+- 注意：真空管、高压电源和大功率设备存在人身与设备风险；交易前独立核验卖家和付款条件。
+- 来源：https://www.diyaudio.com/community/
+- 核验：2026-07-26
+
+## 文化 / 兴趣 / 慢社交
+
+### Tildes
+
+- 入口：https://tildes.net/
+- 定位/氛围：强调慢讨论和社区治理的英文社区，风格不像信息流平台。
+- 注册：邀请制为主，开放情况以官方公告为准。
+- 适合看/里面有什么：适合看技术、文化、科学、生活等主题的长讨论。
+- 注意：更适合愿意读长帖和遵守讨论规范的人。
+- 来源：https://tildes.net/、https://docs.tildes.net/
+- 核验：2026-06-22
+
+### Something Awful Forums
+
+- 入口：https://forums.somethingawful.com/
+- 定位/氛围：英文老互联网论坛代表之一，文化、梗和版块历史都很强。
+- 注册：注册通常需要付费账号，具体以官方注册页为准。
+- 适合看/里面有什么：适合观察早期论坛文化、长线用户社区和付费门槛治理。
+- 注意：社区语境非常本土化，新人不一定容易融入。
+- 来源：https://forums.somethingawful.com/、https://store.somethingawful.com/products/register.php
+- 核验：2026-06-22
+
+### MetaFilter
+
+- 入口：https://www.metafilter.com/
+- 定位/氛围：老牌英文链接分享和讨论社区，强调人工筛选和社区语境。
+- 注册：账号注册和发帖政策以官方页面为准。
+- 适合看/里面有什么：适合观察非算法信息流时代的链接社区和慢讨论。
+- 注意：不像论坛分区那样直观，更像长期社区化的链接精选。
+- 来源：https://www.metafilter.com/
+- 核验：2026-06-22
+
+### Cloudy Nights
+
+- 入口：https://www.cloudynights.com/
+- 定位/氛围：业余天文领域的老牌英文社区，从目视观测、望远镜器材到天文摄影都有稳定分区，经验帖非常多。
+- 注册：开放账号注册，需要显示名、Email、密码和页面安全验证。
+- 适合看/里面有什么：适合查器材选购、观测报告、光学调校、赤道仪、深空摄影、行星摄影和地区观测活动。
+- 注意：站内有 classifieds；购买二手高价器材前应独立核验卖家、成色、运输与付款保障。
+- 来源：https://www.cloudynights.com/、https://www.cloudynights.com/forums/、https://www.cloudynights.com/register/
+- 核验：2026-07-26
+
+### Fountain Pen Network
+
+- 入口：https://www.fountainpennetwork.com/forum/
+- 定位/氛围：围绕钢笔、墨水、纸张、书写、维修和收藏史形成的英文老论坛，评测与历史资料丰富。
+- 注册：账号注册和发帖权限以论坛当前页面及版规为准。
+- 适合看/里面有什么：适合查笔款识别、墨水表现、纸张兼容、笔尖调整、维修经验、品牌历史和线下笔会。
+- 注意：站内 marketplace 涉及真伪、品相和跨境运输；高价收藏品应使用可追踪、具保障的交易方式。
+- 来源：https://www.fountainpennetwork.com/forum/
+- 核验：2026-07-26
+
 ## 成人 / 资源 / 灰区
 
 这一类只作为社区形态观察。会写里面常见的内容类型、18+ 属性和可能混杂的灰色内容，但不要把这里当成推荐列表。
@@ -504,65 +680,13 @@
 - 来源：https://fuliba2023.net/qa、https://www.wnflb2023.com/
 - 核验：2026-06-22
 
-## 海外老论坛 / 泛兴趣
-
-### Something Awful Forums
-
-- 入口：https://forums.somethingawful.com/
-- 定位/氛围：英文老互联网论坛代表之一，文化、梗和版块历史都很强。
-- 注册：注册通常需要付费账号，具体以官方注册页为准。
-- 适合看/里面有什么：适合观察早期论坛文化、长线用户社区和付费门槛治理。
-- 注意：社区语境非常本土化，新人不一定容易融入。
-- 来源：https://forums.somethingawful.com/、https://store.somethingawful.com/products/register.php
-- 核验：2026-06-22
-
-### MetaFilter
-
-- 入口：https://www.metafilter.com/
-- 定位/氛围：老牌英文链接分享和讨论社区，强调人工筛选和社区语境。
-- 注册：账号注册和发帖政策以官方页面为准。
-- 适合看/里面有什么：适合观察非算法信息流时代的链接社区和慢讨论。
-- 注意：不像论坛分区那样直观，更像长期社区化的链接精选。
-- 来源：https://www.metafilter.com/
-- 核验：2026-06-22
-
-### Ars OpenForum
-
-- 入口：https://arstechnica.com/civis/
-- 定位/氛围：Ars Technica 旗下的老牌技术讨论论坛，偏科技、科学、硬件和政策。
-- 注册：普通账号注册，发帖以 Ars Technica 社区规则为准。
-- 适合看/里面有什么：适合看英文技术媒体读者社区的长讨论。
-- 注意：更像媒体社区和论坛文化的混合体。
-- 来源：https://arstechnica.com/civis/
-- 核验：2026-06-22
-
-### ResetEra
-
-- 入口：https://www.resetera.com/
-- 定位/氛围：英文游戏和泛文化讨论论坛，承接了一部分传统游戏论坛用户。
-- 注册：注册和邮箱要求以站点当前规则为准。
-- 适合看/里面有什么：适合看海外游戏业界新闻、玩家观点和长线讨论。
-- 注意：话题和管理风格有明显社区立场，阅读时要带着语境判断。
-- 来源：https://www.resetera.com/
-- 核验：2026-06-22
-
-### NeoGAF
-
-- 入口：https://www.neogaf.com/
-- 定位/氛围：英文游戏论坛老名字，和 ResetEra 的历史关系常被放在一起讨论。
-- 注册：注册和发帖限制以站点当前规则为准。
-- 适合看/里面有什么：适合观察海外游戏论坛文化、业界新闻传播和老社区变迁。
-- 注意：建议和 ResetEra、媒体报道、官方新闻交叉阅读。
-- 来源：https://www.neogaf.com/
-- 核验：2026-06-22
-
 ## 贡献方式
 
 新增社区时请同时更新：
 
 1. `data/communities.json`
-2. 运行 `node scripts/generate-readme.mjs` 同步 README
-3. 必要时更新 `docs/categories.md`
+2. 新分类或分类边界变化时同步 `data/categories.json` 与 `docs/categories.md`
+3. 运行 `node scripts/generate-readme.mjs` 同步 README
 4. 运行 `node scripts/build-site.mjs` 预览生成页面
 
 条目描述尽量写清楚：入口、社区氛围、主要内容、注册门槛、价值、注意事项、来源和核验日期。灰区社区可以写内容类型，但不要写操作教程、交易路径或绕过方法。

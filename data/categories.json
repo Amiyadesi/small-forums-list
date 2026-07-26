@@ -1,0 +1,56 @@
+[
+  {
+    "id": "dev_ai_open_source",
+    "name": "开发 / AI / 开源",
+    "short_name": "开发与 AI",
+    "description": "开发者社区、AI 工具与模型讨论、编程语言、开源项目和技术长讨论。"
+  },
+  {
+    "id": "hosting_network_ops",
+    "name": "主机 / 网络 / 运维",
+    "short_name": "主机与运维",
+    "description": "VPS、服务器、网络、路由、云服务、部署和基础设施运维。"
+  },
+  {
+    "id": "webmaster_indieweb",
+    "name": "站长 / 独立网站",
+    "short_name": "独立网站",
+    "description": "域名、建站、个人主页、独立博客、Web 复古文化和站长生态。"
+  },
+  {
+    "id": "knowledge_tools",
+    "name": "知识 / 搜索 / 数据工具",
+    "short_name": "知识工具",
+    "description": "搜索技巧、资料发现、开放数据、地图、知识管理和工具型社区。"
+  },
+  {
+    "id": "systems_security_software",
+    "name": "安全 / 系统 / 软件",
+    "short_name": "系统与安全",
+    "description": "操作系统、逆向工程、二进制安全、系统工具、刷机与软件技术。"
+  },
+  {
+    "id": "games_acg",
+    "name": "游戏 / ACG / 同人",
+    "short_name": "游戏与 ACG",
+    "description": "电子游戏、动漫、视觉小说、MOD、同人创作和玩家小圈子。"
+  },
+  {
+    "id": "hardware_makers",
+    "name": "硬件 / 电子 / 创客",
+    "short_name": "硬件与创客",
+    "description": "PC 硬件、电子工程、维修、音频 DIY、复古设备和家庭实验室。"
+  },
+  {
+    "id": "culture_hobbies",
+    "name": "文化 / 兴趣 / 慢社交",
+    "short_name": "文化与兴趣",
+    "description": "阅读、写作、天文、文具、泛文化和强调长期关系的慢讨论社区。"
+  },
+  {
+    "id": "adult_gray",
+    "name": "成人 / 资源 / 灰区",
+    "short_name": "成人与灰区",
+    "description": "成人向、资源向、版权敏感或混有高风险信息的传统论坛，仅作社区地图收录。"
+  }
+]

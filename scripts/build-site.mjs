@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, '..');
 const outputDir = path.join(repoRoot, '_site');
+const sourceDir = path.join(repoRoot, 'site');
 const siteBase = '/';
 const siteOrigin = 'https://forums.cc.cd';
 const repo = 'Amiyadesi/small-forums-list';
@@ -12,19 +13,30 @@ const repoId = 'R_kgDOTBXYcA';
 const giscusCategory = 'General';
 const giscusCategoryId = 'DIC_kwDOTBXYcM4C_omU';
 
-const categories = [
-  ['tech_ai_dev', '技术 / AI / 开发者'],
-  ['host_webmaster', '主机 / VPS / 站长 / 独立站'],
-  ['search_resource_tools', '搜索 / 资源 / 知识工具'],
-  ['security_system_software', '安全 / 逆向 / 系统 / 软件'],
-  ['acg_game_niche', 'ACG / 游戏 / 小圈子'],
-  ['hardware_homelab', '硬件 / 电子 / Homelab'],
-  ['adult_resource_gray', '成人 / 资源 / 灰区'],
-  ['overseas_old_forum', '海外老论坛 / 泛兴趣']
-];
-
-const categoryMap = Object.fromEntries(categories);
+const categories = JSON.parse(fs.readFileSync(path.join(repoRoot, 'data', 'categories.json'), 'utf8'));
 const communities = JSON.parse(fs.readFileSync(path.join(repoRoot, 'data', 'communities.json'), 'utf8'));
+const categoryMap = Object.fromEntries(categories.map((category) => [category.id, category]));
+
+const languageNames = {
+  'zh-CN': '中文',
+  'zh-TW': '繁中',
+  en: 'English',
+  ja: '日本語'
+};
+
+const iconPaths = {
+  arrowLeft: '<path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>',
+  arrowUpRight: '<path d="M7 17 17 7"/><path d="M7 7h10v10"/>',
+  chevronRight: '<path d="m9 18 6-6-6-6"/>',
+  github: '<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.28-.36 6.72-1.61 6.72-7A5.4 5.4 0 0 0 19.22 4 5 5 0 0 0 19.13.5S17.95.14 15 1.86a13.4 13.4 0 0 0-7 0C5.05.14 3.87.5 3.87.5A5 5 0 0 0 3.78 4a5.4 5.4 0 0 0-1.5 3.5c0 5.42 3.44 6.64 6.72 7A4.8 4.8 0 0 0 8 18v4"/><path d="M9 18c-4.51 2-5-2-7-2"/>',
+  menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
+  message: '<path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>',
+  moon: '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9"/>',
+  search: '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/>',
+  x: '<path d="M18 6 6 18M6 6l12 12"/>'
+};
+
 const slugOverrides = {
   '奶昔论坛': 'naixi-forum',
   '大佬论坛': 'dalao',
@@ -45,6 +57,10 @@ const slugOverrides = {
   '类脑 / ΟΔΥΣΣΕΙΑ': 'odysseia'
 };
 
+function icon(name, className = '') {
+  return `<svg class="icon${className ? ` ${className}` : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${iconPaths[name]}</svg>`;
+}
+
 function ensureCleanDir(dir) {
   fs.rmSync(dir, { recursive: true, force: true });
   fs.mkdirSync(dir, { recursive: true });
@@ -57,6 +73,14 @@ function escapeHtml(value) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
+}
+
+function simpleHash(input) {
+  let hash = 0;
+  for (const char of String(input)) {
+    hash = (hash * 31 + char.codePointAt(0)) >>> 0;
+  }
+  return hash.toString(36);
 }
 
 function slugify(input) {
@@ -74,14 +98,6 @@ function slugify(input) {
   return ascii || `community-${simpleHash(input)}`;
 }
 
-function simpleHash(input) {
-  let hash = 0;
-  for (const char of String(input)) {
-    hash = (hash * 31 + char.codePointAt(0)) >>> 0;
-  }
-  return hash.toString(36);
-}
-
 const usedSlugs = new Map();
 for (const community of communities) {
   const baseSlug = slugify(community.name);
@@ -95,70 +111,148 @@ for (const community of communities) {
   community.slug = slug;
 }
 
+const communitiesByCategory = categories.map((category) => ({
+  ...category,
+  items: communities.filter((item) => item.category === category.id)
+}));
+
 function linkToCommunity(item) {
   return `${siteBase}communities/${item.slug}/`;
 }
-
-const communitiesByCategory = categories.map(([id, name]) => ({
-  id,
-  name,
-  items: communities.filter((item) => item.category === id)
-}));
 
 function homeAnchor(id) {
   return `${siteBase}#${id}`;
 }
 
+function languageGroups(languages) {
+  const groups = new Set();
+  for (const language of languages || []) {
+    if (language.startsWith('zh')) groups.add('zh');
+    if (language === 'en') groups.add('en');
+    if (language === 'ja') groups.add('ja');
+  }
+  return [...groups];
+}
+
+function displayLanguages(languages) {
+  return (languages || []).map((language) => languageNames[language] || language);
+}
+
+function communitySearchText(item) {
+  return [
+    item.name,
+    ...(item.aliases || []),
+    categoryMap[item.category]?.name || item.category,
+    categoryMap[item.category]?.short_name || '',
+    ...(item.language || []),
+    ...displayLanguages(item.language),
+    ...(item.tags || []),
+    item.vibe,
+    item.benefits
+  ].join(' ');
+}
+
+function monogram(name) {
+  const words = String(name).trim().split(/[\s/]+/).filter(Boolean);
+  if (words.length > 1 && /^[\x00-\x7F]+$/.test(name)) {
+    return words.slice(0, 2).map((word) => word[0]).join('').toUpperCase();
+  }
+  return [...String(name).replace(/\s/g, '')].slice(0, 2).join('').toUpperCase();
+}
+
+function renderHeader() {
+  return `<header class="site-header">
+  <div class="header-inner">
+    <button class="icon-button nav-toggle" type="button" data-drawer-open aria-controls="site-drawer" aria-expanded="false" aria-label="打开目录" title="打开目录">
+      ${icon('menu')}
+    </button>
+    <a class="brand" href="${siteBase}" aria-label="Small Forums List 首页">
+      <span class="brand-mark" aria-hidden="true">SF</span>
+      <span class="brand-copy"><strong>Small Forums List</strong><small>小众社区目录</small></span>
+    </a>
+    <nav class="header-actions" aria-label="站点操作">
+      <a class="header-link discussions-link" href="https://github.com/${repo}/discussions">
+        ${icon('message')}<span>讨论</span>
+      </a>
+      <a class="header-link" href="https://github.com/${repo}">
+        ${icon('github')}<span>GitHub</span>
+      </a>
+      <button class="icon-button theme-toggle" type="button" data-theme-toggle aria-label="切换到深色模式" title="切换主题">
+        ${icon('sun', 'theme-icon theme-icon-sun')}
+        ${icon('moon', 'theme-icon theme-icon-moon')}
+      </button>
+    </nav>
+  </div>
+</header>`;
+}
+
 function renderSidebar({ activeCategory = '', activeSlug = '' } = {}) {
-  const categoryLinks = communitiesByCategory.map(({ id, name, items }) => {
+  const categoryLinks = communitiesByCategory.map(({ id, short_name: shortName, items }) => {
     const active = activeCategory === id ? ' is-active' : '';
-    const searchText = [name, id].join(' ');
-    return `<a class="nav-link${active}" href="${homeAnchor(id)}" data-search-item data-search-text="${escapeHtml(searchText)}">${escapeHtml(name)}<span>${items.length}</span></a>`;
+    return `<a class="sidebar-link category-link${active}" href="${homeAnchor(id)}" data-category="${escapeHtml(id)}" data-directory-category-link="${escapeHtml(id)}">
+      <span class="category-dot" aria-hidden="true"></span>
+      <span>${escapeHtml(shortName)}</span>
+      <small>${items.length}</small>
+    </a>`;
   }).join('\n');
 
-  const communityGroups = communitiesByCategory.map(({ id, name, items }) => {
-    const defaultOpen = !activeCategory || activeCategory === id;
+  const communityGroups = communitiesByCategory.map(({ id, short_name: shortName, items }) => {
     const itemLinks = items.map((item) => {
       const active = activeSlug === item.slug ? ' is-active' : '';
-      const searchText = [
-        item.name,
-        ...(item.aliases || []),
-        categoryMap[item.category] ?? item.category,
-        item.language,
-        ...(item.tags || [])
-      ].flat().join(' ');
-      return `<li data-search-item data-search-text="${escapeHtml(searchText)}"><a class="${active}" href="${linkToCommunity(item)}">${escapeHtml(item.name)}</a></li>`;
+      return `<li data-nav-item data-search-text="${escapeHtml(communitySearchText(item))}"><a class="${active}" href="${linkToCommunity(item)}">${escapeHtml(item.name)}</a></li>`;
     }).join('\n');
+    const open = activeCategory === id ? ' open' : '';
 
-    return `<details class="community-nav-group"${defaultOpen ? ' open data-default-open' : ''} data-search-group data-search-text="${escapeHtml(`${name} ${id}`)}">
-  <summary>${escapeHtml(name)}</summary>
-  <ul>
-${itemLinks}
-  </ul>
-</details>`;
+    return `<details class="community-nav-group" data-nav-group data-category="${escapeHtml(id)}"${open}>
+      <summary><span>${escapeHtml(shortName)}</span><small>${items.length}</small></summary>
+      <ul>${itemLinks}</ul>
+    </details>`;
   }).join('\n');
 
-  return `<aside class="docs-sidebar" aria-label="站点目录">
-  <div class="sidebar-inner">
-    <a class="sidebar-title" href="${siteBase}">Small Forums List</a>
-    <p class="sidebar-subtitle">小型论坛与圈内社区目录</p>
-    <label class="sidebar-search">
-      <span>Search</span>
-      <input type="search" placeholder="搜索社区 / 分类" autocomplete="off" data-site-search>
-    </label>
-    <nav class="docs-nav">
-      <a class="nav-link" href="${homeAnchor('overview')}">概览</a>
-      <a class="nav-link" href="${homeAnchor('category-index')}">分类总览</a>
-      <div class="nav-heading">分类</div>
-${categoryLinks}
-      <div class="nav-heading">社区索引</div>
-${communityGroups}
+  return `<aside class="site-sidebar" id="site-drawer" aria-label="社区目录">
+  <div class="drawer-heading">
+    <span>浏览目录</span>
+    <button class="icon-button" type="button" data-drawer-close aria-label="关闭目录" title="关闭目录">${icon('x')}</button>
+  </div>
+  <div class="sidebar-scroll">
+    <div class="sidebar-summary">
+      <span>已整理</span>
+      <strong>${communities.length} 个社区</strong>
+      <small>${categories.length} 个主题分类</small>
+    </div>
+    <nav class="sidebar-nav" aria-label="主题分类">
+      <p class="sidebar-label">主题</p>
+      <a class="sidebar-link" href="${siteBase}#directory" data-directory-category-link="all">
+        <span class="all-dot" aria-hidden="true"></span>
+        <span>全部社区</span>
+        <small>${communities.length}</small>
+      </a>
+      ${categoryLinks}
     </nav>
+    <div class="sidebar-index">
+      <label class="nav-search">
+        <span class="sr-only">搜索侧栏社区索引</span>
+        ${icon('search')}
+        <input type="search" data-nav-search placeholder="搜索社区索引" autocomplete="off">
+        <button type="button" class="input-clear" data-nav-search-clear aria-label="清除索引搜索" title="清除搜索" hidden>${icon('x')}</button>
+      </label>
+      <p class="sidebar-label">社区索引</p>
+      <div class="community-nav-groups">${communityGroups}</div>
+      <p class="nav-empty" data-nav-empty hidden>没有匹配的社区</p>
+    </div>
   </div>
 </aside>`;
 }
 
-function renderShell({ title, description, body, canonicalPath = siteBase, activeCategory = '', activeSlug = '' }) {
+function renderShell({
+  title,
+  description,
+  body,
+  canonicalPath = siteBase,
+  activeCategory = '',
+  activeSlug = '',
+  pageClass = ''
+}) {
   const fullTitle = title === 'Small Forums List' ? title : `${title} - Small Forums List`;
   return `<!doctype html>
 <html lang="zh-CN">
@@ -167,166 +261,231 @@ function renderShell({ title, description, body, canonicalPath = siteBase, activ
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(fullTitle)}</title>
   <meta name="description" content="${escapeHtml(description)}">
+  <meta name="theme-color" content="#f7f8f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151716" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="${siteOrigin}${canonicalPath}">
   <link rel="icon" href="${siteBase}favicon.svg" type="image/svg+xml">
+  <script>try{const t=localStorage.getItem('sfl-theme');document.documentElement.dataset.theme=t||((matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light')}catch{}</script>
   <link rel="stylesheet" href="${siteBase}assets/styles.css">
   <script src="${siteBase}assets/site.js" defer></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="${siteBase}">Small Forums List</a>
-      <nav class="top-nav" aria-label="主导航">
-        <a href="${siteBase}">目录</a>
-        <a href="https://github.com/${repo}">GitHub</a>
-        <a href="https://github.com/${repo}/discussions">评论区</a>
-      </nav>
-    </div>
-  </header>
-  <main class="docs-layout">
-${renderSidebar({ activeCategory, activeSlug })}
-    <div class="docs-content">
+<body class="${escapeHtml(pageClass)}">
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  ${renderHeader()}
+  <div class="drawer-backdrop" data-drawer-backdrop aria-hidden="true"></div>
+  <div class="site-layout">
+    ${renderSidebar({ activeCategory, activeSlug })}
+    <div class="page-column">
+      <main class="site-main" id="main-content" tabindex="-1">
 ${body}
+      </main>
+      <footer class="site-footer">
+        <p>收录不等于推荐或背书。信息可能变化，请以社区当前规则为准。</p>
+        <p><a href="https://github.com/${repo}">${repo}</a> · 欢迎通过 PR 修正资料</p>
+      </footer>
     </div>
-  </main>
-  <footer class="site-footer">
-    <div>由 <a href="https://github.com/${repo}">${repo}</a> 生成。欢迎提交 PR 修正社区信息。</div>
-  </footer>
+  </div>
 </body>
 </html>`;
 }
 
-function renderMetaRow(label, value) {
-  if (!value || (Array.isArray(value) && value.length === 0)) return '';
-  const content = Array.isArray(value) ? value.map(escapeHtml).join('、') : escapeHtml(value);
-  return `<dt>${escapeHtml(label)}</dt><dd>${content}</dd>`;
-}
+function renderCommunityRow(item) {
+  const languages = displayLanguages(item.language).map((language) => `<span class="meta-token language-token">${escapeHtml(language)}</span>`).join('');
+  const tags = (item.tags || []).slice(0, 3).map((tag) => `<span class="meta-token">${escapeHtml(tag)}</span>`).join('');
 
-function renderCommunityCard(item) {
-  const tagList = (item.tags || []).slice(0, 4).map((tag) => `<span>${escapeHtml(tag)}</span>`).join('');
-  return `<article class="wiki-entry">
-  <h3><a href="${linkToCommunity(item)}">${escapeHtml(item.name)}</a></h3>
-  <p>${escapeHtml(item.vibe)}</p>
-  <div class="entry-meta">
-    <span>${escapeHtml(item.language)}</span>
-    ${tagList}
+  return `<article class="community-row" data-community data-category="${escapeHtml(item.category)}" data-languages="${escapeHtml(languageGroups(item.language).join(' '))}" data-search-text="${escapeHtml(communitySearchText(item))}">
+  <a class="community-identity" href="${linkToCommunity(item)}">
+    <span class="community-monogram" aria-hidden="true">${escapeHtml(monogram(item.name))}</span>
+    <span class="community-name"><strong>${escapeHtml(item.name)}</strong>${item.aliases?.length ? `<small>${escapeHtml(item.aliases[0])}</small>` : ''}</span>
+  </a>
+  <div class="community-summary">
+    <p>${escapeHtml(item.vibe)}</p>
+    <div class="community-meta">${languages}${tags}</div>
   </div>
-  <div class="entry-links">
-    <a href="${linkToCommunity(item)}">详情</a>
-    <a href="${escapeHtml(item.url)}">入口</a>
+  <div class="community-actions">
+    <a class="row-detail" href="${linkToCommunity(item)}" aria-label="查看 ${escapeHtml(item.name)} 详情" title="查看详情">${icon('chevronRight')}</a>
+    <a class="row-external" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer"><span>访问</span>${icon('arrowUpRight')}</a>
   </div>
 </article>`;
 }
 
 function renderIndex() {
   const latestChecked = communities.reduce((latest, item) => item.last_checked > latest ? item.last_checked : latest, '');
-  const categoryNav = categories.map(([id, name]) => {
-    const count = communities.filter((item) => item.category === id).length;
-    return `<a href="#${id}">${escapeHtml(name)}<span>${count}</span></a>`;
-  }).join('\n');
+  const spectrum = communitiesByCategory.map(({ id, short_name: shortName, items }) => `<span data-category="${escapeHtml(id)}" style="--weight:${items.length}" title="${escapeHtml(shortName)}：${items.length} 个"><i></i></span>`).join('');
+  const categoryFilters = categories.map(({ id, short_name: shortName }) => `<button type="button" data-category-filter="${escapeHtml(id)}" aria-pressed="false">${escapeHtml(shortName)}</button>`).join('');
 
-  const sections = categories.map(([id, name]) => {
-    const items = communities.filter((item) => item.category === id);
-    return `<section class="wiki-section" id="${id}">
-  <div class="section-title">
-    <h2>${escapeHtml(name)}</h2>
-    <span>${items.length} 个</span>
-  </div>
-  <div class="wiki-entry-list">
-${items.map(renderCommunityCard).join('\n')}
-  </div>
-</section>`;
-  }).join('\n');
+  const sections = communitiesByCategory.map(({ id, name, description, items }) => `<section class="category-section" id="${escapeHtml(id)}" data-category-section data-category="${escapeHtml(id)}">
+  <header class="category-heading">
+    <div>
+      <p><span class="category-dot" aria-hidden="true"></span>主题分类</p>
+      <h2>${escapeHtml(name)}</h2>
+      <div>${escapeHtml(description)}</div>
+    </div>
+    <span class="section-count"><strong data-section-count>${items.length}</strong> 个</span>
+  </header>
+  <div class="community-list">${items.map(renderCommunityRow).join('\n')}</div>
+</section>`).join('\n');
 
   return renderShell({
     title: 'Small Forums List',
-    description: '国内外小型、圈内、传统论坛和隐藏社区入口列表。',
-    body: `    <section class="intro doc-hero" id="overview">
-      <h1>Small Forums List</h1>
-      <p>整理国内外小型、圈内、传统论坛和隐藏社区入口。这里的“小型”不是严格按用户量计算，而是指不主动搜索、不混相关领域，基本不会自然刷到的社区。</p>
-      <p>目前主要由 AI 按公开信息、站点页面和少量个人体验整理；只有一部分社区是长期进入体验过的。欢迎各社区成员提交 PR，补充真实看法和更准确的注册、氛围、入口信息。</p>
-      <div class="stats">
-        <span>${communities.length} 个社区</span>
-        <span>${categories.length} 个分类</span>
-        <span>核验 ${escapeHtml(latestChecked)}</span>
+    description: '国内外小型、圈内、传统论坛和隐藏社区入口目录，支持主题、语言和关键词筛选。',
+    pageClass: 'page-home',
+    body: `    <section class="directory-intro" id="directory" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="kicker"><span aria-hidden="true"></span>Beyond algorithmic feeds</p>
+        <h1 id="page-title">小众社区目录</h1>
+        <p>收集不主动搜索就很难遇到的论坛与独立社区。按公开页面和社区资料整理入口、氛围、注册方式与风险，不把收录当作推荐。</p>
+        <div class="directory-stats" aria-label="目录统计">
+          <span><strong>${communities.length}</strong> 社区</span>
+          <span><strong>${categories.length}</strong> 分类</span>
+          <span>更新至 <strong>${escapeHtml(latestChecked)}</strong></span>
+        </div>
+      </div>
+      <div class="category-spectrum" aria-label="各分类社区数量分布">
+        <p>目录分布</p>
+        <div>${spectrum}</div>
+        <small>色块宽度代表各主题当前收录量</small>
       </div>
     </section>
-    <section class="doc-panel" id="category-index">
-      <h2>分类总览</h2>
-      <p>按大方向先分组，再在左侧索引和下方条目中进入具体社区页面。每个社区页底部都有评论区，方便补充真实体验和修正信息。</p>
-      <nav class="category-nav" aria-label="分类目录">
-${categoryNav}
-      </nav>
+
+    <section class="directory-toolbar" aria-label="目录筛选">
+      <label class="directory-search">
+        <span class="sr-only">搜索社区</span>
+        ${icon('search')}
+        <input type="search" data-directory-search placeholder="搜索名称、别名、标签或社区氛围" autocomplete="off">
+        <button type="button" class="input-clear" data-directory-search-clear aria-label="清除搜索" title="清除搜索" hidden>${icon('x')}</button>
+      </label>
+      <div class="filter-row">
+        <span class="filter-label">主题</span>
+        <div class="segmented-scroll">
+          <div class="segmented-control" role="group" aria-label="按主题筛选">
+            <button type="button" data-category-filter="all" aria-pressed="true">全部</button>${categoryFilters}
+          </div>
+        </div>
+      </div>
+      <div class="filter-row compact-filter-row">
+        <span class="filter-label">语言</span>
+        <div class="segmented-control language-control" role="group" aria-label="按语言筛选">
+          <button type="button" data-language-filter="all" aria-pressed="true">全部</button>
+          <button type="button" data-language-filter="zh" aria-pressed="false">中文</button>
+          <button type="button" data-language-filter="en" aria-pressed="false">English</button>
+          <button type="button" data-language-filter="ja" aria-pressed="false">日本語</button>
+        </div>
+      </div>
     </section>
-${sections}`
+
+    <div class="results-summary">
+      <p data-result-count aria-live="polite">显示全部 ${communities.length} 个社区</p>
+      <button type="button" class="text-button" data-reset-filters hidden>清除筛选</button>
+    </div>
+
+    <section class="empty-state" data-empty-state hidden aria-labelledby="empty-title">
+      ${icon('search')}
+      <h2 id="empty-title">没有匹配的社区</h2>
+      <p>换一个关键词，或清除主题与语言筛选。</p>
+      <button type="button" class="command-button" data-reset-filters>清除筛选</button>
+    </section>
+
+    <div class="directory-results" data-directory-results>${sections}</div>`
   });
+}
+
+function renderTokens(values, className = '') {
+  return (values || []).map((value) => `<span class="fact-token${className ? ` ${className}` : ''}">${escapeHtml(value)}</span>`).join('');
+}
+
+function renderFactRow(label, content) {
+  if (!content) return '';
+  return `<div class="fact-row"><dt>${escapeHtml(label)}</dt><dd>${content}</dd></div>`;
+}
+
+function sourceLabel(source) {
+  try {
+    const url = new URL(source);
+    const pathLabel = url.pathname === '/' ? '' : url.pathname.replace(/\/$/, '');
+    return `${url.hostname}${pathLabel}`;
+  } catch {
+    return source;
+  }
 }
 
 function renderGiscus(item) {
   return `<section class="comments" aria-labelledby="comments-title">
-  <h2 id="comments-title">社区留言</h2>
-  <p>欢迎补充你对 ${escapeHtml(item.name)} 的真实体验、注册状态和分类修正。评论由 GitHub Discussions / Giscus 承载。</p>
-  <script src="https://giscus.app/client.js"
-    data-repo="${repo}"
-    data-repo-id="${repoId}"
-    data-category="${giscusCategory}"
-    data-category-id="${giscusCategoryId}"
-    data-mapping="pathname"
-    data-strict="1"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    crossorigin="anonymous"
-    async>
-  </script>
-  <noscript>需要启用 JavaScript 才能加载评论区。</noscript>
+  <div class="comments-heading">
+    <p>GitHub Discussions</p>
+    <h2 id="comments-title">补充社区体验</h2>
+    <div>欢迎修正 ${escapeHtml(item.name)} 的注册状态、氛围和分类。请避免发布隐私、交易引流或具体灰区操作路径。</div>
+  </div>
+  <div class="giscus-wrap">
+    <script src="https://giscus.app/client.js"
+      data-repo="${repo}"
+      data-repo-id="${repoId}"
+      data-category="${giscusCategory}"
+      data-category-id="${giscusCategoryId}"
+      data-mapping="pathname"
+      data-strict="1"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="preferred_color_scheme"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async>
+    </script>
+    <noscript>需要启用 JavaScript 才能加载评论区。</noscript>
+  </div>
 </section>`;
 }
 
 function renderCommunityPage(item) {
-  const aliases = item.aliases && item.aliases.length ? item.aliases : [];
-  const risks = item.risks && item.risks.length ? item.risks : [];
-  const sources = item.sources && item.sources.length ? item.sources : [];
-  const sourceList = sources.map((source) => `<li><a href="${escapeHtml(source)}">${escapeHtml(source)}</a></li>`).join('\n');
-  const body = `    <a class="back-link" href="${siteBase}#${item.category}">返回 ${escapeHtml(categoryMap[item.category] ?? item.category)}</a>
-    <article class="detail">
+  const category = categoryMap[item.category];
+  const sources = (item.sources || []).map((source) => `<li><a href="${escapeHtml(source)}" target="_blank" rel="noreferrer"><span>${escapeHtml(sourceLabel(source))}</span>${icon('arrowUpRight')}</a></li>`).join('\n');
+  const facts = [
+    renderFactRow('语言', renderTokens(displayLanguages(item.language), 'language-fact')),
+    renderFactRow('别名', item.aliases?.length ? escapeHtml(item.aliases.join('、')) : ''),
+    renderFactRow('标签', renderTokens(item.tags)),
+    renderFactRow('注意标签', item.risks?.length ? renderTokens(item.risks, 'risk-fact') : ''),
+    renderFactRow('最后核验', `<time datetime="${escapeHtml(item.last_checked)}">${escapeHtml(item.last_checked)}</time>`)
+  ].join('');
+
+  const body = `    <div class="detail-back"><a href="${homeAnchor(item.category)}">${icon('arrowLeft')}返回 ${escapeHtml(category?.short_name || item.category)}</a></div>
+    <article class="community-detail" data-category="${escapeHtml(item.category)}">
       <header class="detail-header">
-        <p>${escapeHtml(categoryMap[item.category] ?? item.category)}</p>
+        <p class="detail-category"><span class="category-dot" aria-hidden="true"></span>${escapeHtml(category?.name || item.category)}</p>
         <h1>${escapeHtml(item.name)}</h1>
-        <a class="primary-link" href="${escapeHtml(item.url)}">访问入口</a>
-      </header>
-      <dl class="meta-list">
-        ${renderMetaRow('别名', aliases)}
-        ${renderMetaRow('语言', item.language)}
-        ${renderMetaRow('分类', categoryMap[item.category] ?? item.category)}
-        ${renderMetaRow('标签', item.tags)}
-        ${renderMetaRow('常见风险/注意点', risks)}
-        ${renderMetaRow('最后核验', item.last_checked)}
-      </dl>
-      <section>
-        <h2>定位 / 氛围</h2>
         <p>${escapeHtml(item.vibe)}</p>
-      </section>
-      <section>
-        <h2>注册方式</h2>
-        <p>${escapeHtml(item.registration)}</p>
-      </section>
-      <section>
-        <h2>适合看 / 里面有什么</h2>
-        <p>${escapeHtml(item.benefits)}</p>
-      </section>
-      <section>
-        <h2>注意</h2>
-        <p>${escapeHtml(item.notes)}</p>
-      </section>
-      <section>
-        <h2>来源</h2>
-        <ul class="source-list">
-${sourceList}
-        </ul>
-      </section>
+        <a class="primary-link" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">访问社区${icon('arrowUpRight')}</a>
+      </header>
+
+      <div class="detail-layout">
+        <div class="detail-content">
+          <section>
+            <p class="section-kicker">Access</p>
+            <h2>注册方式</h2>
+            <p>${escapeHtml(item.registration)}</p>
+          </section>
+          <section>
+            <p class="section-kicker">Why visit</p>
+            <h2>适合看什么</h2>
+            <p>${escapeHtml(item.benefits)}</p>
+          </section>
+          <section>
+            <p class="section-kicker">Before you go</p>
+            <h2>进入前注意</h2>
+            <p>${escapeHtml(item.notes)}</p>
+          </section>
+          <section>
+            <p class="section-kicker">Sources</p>
+            <h2>公开来源</h2>
+            <ul class="source-list">${sources}</ul>
+          </section>
+        </div>
+        <aside class="detail-facts" aria-label="社区资料">
+          <h2>资料速览</h2>
+          <dl>${facts}</dl>
+          <p>信息可能随站点政策变化。注册或下载前，请再次查看官方页面。</p>
+        </aside>
+      </div>
     </article>
     ${renderGiscus(item)}`;
 
@@ -336,6 +495,7 @@ ${sourceList}
     canonicalPath: `${siteBase}communities/${item.slug}/`,
     activeCategory: item.category,
     activeSlug: item.slug,
+    pageClass: 'page-detail',
     body
   });
 }
@@ -346,461 +506,22 @@ function writeFile(relativePath, content) {
   fs.writeFileSync(target, content);
 }
 
-const styles = `:root {
-  color-scheme: light dark;
-  --bg: #f6f7f8;
-  --sidebar: #ffffff;
-  --surface: #ffffff;
-  --surface-2: #eef2f4;
-  --text: #172027;
-  --muted: #65717b;
-  --border: #d9e0e5;
-  --accent: #0f766e;
-  --accent-soft: #dff4f0;
-  --danger: #a14335;
-  --code: #f3f5f7;
-  --header-h: 56px;
-  --sidebar-w: 286px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #121619;
-    --sidebar: #171c20;
-    --surface: #1b2025;
-    --surface-2: #222a30;
-    --text: #eef3f6;
-    --muted: #aab4bc;
-    --border: #334049;
-    --accent: #5eead4;
-    --accent-soft: rgba(94, 234, 212, 0.14);
-    --danger: #f09a8a;
-    --code: #11171b;
-  }
-}
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 16px;
-  line-height: 1.68;
-}
-a {
-  color: inherit;
-  text-decoration-color: color-mix(in srgb, var(--accent), transparent 45%);
-  text-underline-offset: 0.22em;
-}
-a:hover { color: var(--accent); }
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  min-height: var(--header-h);
-  background: color-mix(in srgb, var(--surface), transparent 8%);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(14px);
-}
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: var(--header-h);
-  padding: 0 22px;
-  gap: 18px;
-}
-.brand { font-weight: 760; text-decoration: none; letter-spacing: 0; }
-.top-nav { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
-.top-nav a { text-decoration: none; }
-.docs-layout {
-  display: grid;
-  grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
-  align-items: start;
-  min-height: calc(100vh - var(--header-h));
-}
-.docs-sidebar {
-  position: sticky;
-  top: var(--header-h);
-  height: calc(100vh - var(--header-h));
-  overflow: auto;
-  background: var(--sidebar);
-  border-right: 1px solid var(--border);
-}
-.sidebar-inner { padding: 20px 18px 28px; }
-.sidebar-title {
-  display: block;
-  font-size: 18px;
-  font-weight: 760;
-  text-decoration: none;
-}
-.sidebar-subtitle {
-  margin: 4px 0 18px;
-  color: var(--muted);
-  font-size: 13px;
-}
-.sidebar-search {
-  display: grid;
-  gap: 6px;
-  margin: 0 0 16px;
-}
-.sidebar-search span {
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 720;
-  letter-spacing: 0.04em;
-}
-.sidebar-search input {
-  width: 100%;
-  min-height: 36px;
-  padding: 7px 10px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  color: var(--text);
-  font: inherit;
-  font-size: 14px;
-}
-.sidebar-search input::placeholder { color: var(--muted); }
-.sidebar-search input:focus {
-  outline: 2px solid color-mix(in srgb, var(--accent), transparent 50%);
-  outline-offset: 1px;
-  border-color: color-mix(in srgb, var(--accent), var(--border) 45%);
-}
-.docs-nav { display: grid; gap: 4px; font-size: 14px; }
-.nav-heading {
-  margin: 18px 0 6px;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 720;
-  letter-spacing: 0.04em;
-}
-.nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  min-height: 32px;
-  padding: 5px 8px;
-  border-radius: 6px;
-  color: var(--muted);
-  text-decoration: none;
-}
-.nav-link span { font-size: 12px; }
-.nav-link:hover,
-.nav-link.is-active {
-  background: var(--accent-soft);
-  color: var(--text);
-}
-.community-nav-group {
-  border-radius: 6px;
-}
-.community-nav-group summary {
-  cursor: pointer;
-  min-height: 32px;
-  padding: 5px 8px;
-  border-radius: 6px;
-  color: var(--muted);
-  list-style-position: inside;
-}
-.community-nav-group summary:hover { background: var(--surface-2); color: var(--text); }
-.community-nav-group ul {
-  display: grid;
-  gap: 1px;
-  margin: 2px 0 10px 16px;
-  padding: 0;
-  list-style: none;
-}
-.community-nav-group a {
-  display: block;
-  padding: 4px 8px;
-  border-radius: 6px;
-  color: var(--muted);
-  text-decoration: none;
-  overflow-wrap: anywhere;
-}
-.community-nav-group a:hover,
-.community-nav-group a.is-active {
-  background: var(--accent-soft);
-  color: var(--text);
-}
-[data-search-item][hidden],
-[data-search-group][hidden] { display: none; }
-.docs-content {
-  width: min(100%, 1100px);
-  padding: 38px clamp(24px, 5vw, 64px) 64px;
-}
-.doc-hero {
-  padding: 8px 0 26px;
-  border-bottom: 1px solid var(--border);
-}
-.doc-hero h1 {
-  margin: 0 0 14px;
-  font-size: clamp(34px, 5vw, 56px);
-  line-height: 1.08;
-  letter-spacing: 0;
-}
-.doc-hero p {
-  max-width: 820px;
-  margin: 0 0 12px;
-  color: var(--muted);
-  font-size: 17px;
-}
-.stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-.stats span,
-.entry-meta span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 28px;
-  padding: 3px 9px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  color: var(--muted);
-  font-size: 13px;
-}
-.doc-panel {
-  margin: 26px 0 34px;
-  padding: 18px 20px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-}
-.doc-panel h2 { margin: 0 0 8px; font-size: 22px; }
-.doc-panel p { margin: 0 0 14px; color: var(--muted); }
-.category-nav {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-}
-.category-nav a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 38px;
-  padding: 7px 10px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  text-decoration: none;
-}
-.category-nav span { color: var(--muted); font-size: 13px; }
-.wiki-section {
-  margin: 0 0 42px;
-  scroll-margin-top: calc(var(--header-h) + 18px);
-}
-.section-title {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 10px;
-}
-.section-title h2 { margin: 0; font-size: 26px; letter-spacing: 0; }
-.section-title span { color: var(--muted); font-size: 14px; }
-.wiki-entry-list {
-  display: grid;
-  gap: 0;
-}
-.wiki-entry {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(160px, 0.28fr) minmax(0, 1fr) auto;
-  gap: 14px;
-  align-items: start;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border);
-}
-.wiki-entry h3 {
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.35;
-}
-.wiki-entry h3 a { text-decoration: none; }
-.wiki-entry p {
-  margin: 0;
-  color: var(--muted);
-}
-.entry-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  grid-column: 2 / 3;
-}
-.entry-links {
-  display: flex;
-  gap: 10px;
-  white-space: nowrap;
-  font-size: 14px;
-}
-.back-link {
-  display: inline-flex;
-  margin-bottom: 16px;
-  color: var(--muted);
-}
-.detail,
-.comments {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: clamp(20px, 4vw, 38px);
-}
-.detail-header {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 10px 18px;
-  align-items: end;
-  margin-bottom: 22px;
-}
-.detail-header p {
-  grid-column: 1 / -1;
-  margin: 0;
-  color: var(--danger);
-  font-size: 14px;
-}
-.detail-header h1 {
-  margin: 0;
-  font-size: clamp(32px, 5vw, 52px);
-  line-height: 1.1;
-  letter-spacing: 0;
-}
-.primary-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 40px;
-  padding: 7px 14px;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 650;
-}
-.primary-link:hover { color: #fff; filter: brightness(0.96); }
-.meta-list {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 10px 18px;
-  padding: 16px 0;
-  margin: 0 0 10px;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.meta-list dt { color: var(--muted); }
-.meta-list dd { margin: 0; overflow-wrap: anywhere; }
-.detail section { margin-top: 24px; }
-.detail h2,
-.comments h2 { margin: 0 0 8px; font-size: 21px; }
-.detail p,
-.comments p { margin: 0; color: var(--muted); }
-.source-list { margin: 0; padding-left: 20px; overflow-wrap: anywhere; }
-.comments { margin-top: 20px; }
-.site-footer {
-  margin-left: var(--sidebar-w);
-  border-top: 1px solid var(--border);
-  padding: 22px clamp(24px, 5vw, 64px) 34px;
-  color: var(--muted);
-  font-size: 14px;
-}
-@media (max-width: 960px) {
-  :root { --header-h: auto; }
-  .site-header { position: static; }
-  .header-inner {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 12px 16px;
-  }
-  .docs-layout { display: block; }
-  .docs-sidebar {
-    position: static;
-    height: auto;
-    max-height: 48vh;
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .sidebar-inner { padding: 14px 16px 16px; }
-  .docs-content { padding: 28px 16px 48px; }
-  .site-footer { margin-left: 0; padding: 20px 16px 30px; }
-  .category-nav { grid-template-columns: 1fr; }
-  .wiki-entry {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .entry-meta { grid-column: auto; }
-  .entry-links { white-space: normal; }
-  .detail-header { grid-template-columns: 1fr; }
-  .primary-link { width: 100%; }
-  .meta-list { grid-template-columns: 1fr; gap: 2px; }
-}`;
-
-const siteScript = `(() => {
-  const input = document.querySelector('[data-site-search]');
-  if (!input) return;
-
-  const normalize = (value) => String(value || '').trim().toLowerCase();
-  const groups = [...document.querySelectorAll('[data-search-group]')];
-  const categoryLinks = [...document.querySelectorAll('.nav-link[data-search-item]')];
-
-  const applyFilter = () => {
-    const query = normalize(input.value);
-    categoryLinks.forEach((link) => {
-      link.hidden = query ? !normalize(link.dataset.searchText).includes(query) : false;
-    });
-
-    groups.forEach((group) => {
-      const items = [...group.querySelectorAll('li[data-search-item]')];
-      const groupMatch = query && normalize(group.dataset.searchText).includes(query);
-      let visibleCount = 0;
-
-      items.forEach((item) => {
-        const match = !query || groupMatch || normalize(item.dataset.searchText).includes(query);
-        item.hidden = !match;
-        if (match) visibleCount += 1;
-      });
-
-      group.hidden = query ? visibleCount === 0 : false;
-      if (query && visibleCount > 0) {
-        group.open = true;
-      } else if (!query) {
-        group.open = group.hasAttribute('data-default-open');
-      }
-    });
-  };
-
-  input.addEventListener('input', applyFilter);
-  input.addEventListener('search', applyFilter);
-  input.addEventListener('keydown', (event) => {
-    if (event.key !== 'Escape') return;
-    input.value = '';
-    applyFilter();
-  });
-})();`;
-
+const categoryToneStyles = categories.map(({ id }, index) => `[data-category="${id}"] { --category-color: var(--category-${index + 1}); }`).join('\n');
 const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#0f766e"/>
-  <path fill="#ffffff" d="M16 17h32v6H16zM16 29h32v6H16zM16 41h22v6H16z"/>
-</svg>
-`;
+  <rect width="64" height="64" rx="10" fill="#202524"/>
+  <path fill="#f7f8f7" d="M14 15h25v7H21v8h16v7H21v13h-7z"/>
+  <rect x="42" y="15" width="8" height="35" fill="#e96b41"/>
+</svg>\n`;
 
 ensureCleanDir(outputDir);
-writeFile('assets/styles.css', styles);
-writeFile('assets/site.js', siteScript);
+writeFile('assets/styles.css', `${fs.readFileSync(path.join(sourceDir, 'styles.css'), 'utf8').trim()}\n\n${categoryToneStyles}\n`);
+writeFile('assets/site.js', fs.readFileSync(path.join(sourceDir, 'site.js'), 'utf8'));
 writeFile('favicon.svg', favicon);
 writeFile('index.html', renderIndex());
 for (const community of communities) {
   writeFile(path.join('communities', community.slug, 'index.html'), renderCommunityPage(community));
 }
-writeFile('communities.json', JSON.stringify(communities.map(({ slug, ...item }) => ({ slug, ...item })), null, 2) + '\n');
+writeFile('communities.json', `${JSON.stringify(communities.map(({ slug, ...item }) => ({ slug, ...item })), null, 2)}\n`);
 writeFile('CNAME', 'forums.cc.cd\n');
 writeFile('.nojekyll', '');
 

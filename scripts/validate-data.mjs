@@ -3,17 +3,7 @@ import path from 'node:path';
 
 const repoRoot = process.cwd();
 const dataPath = path.join(repoRoot, 'data', 'communities.json');
-
-const categories = new Set([
-  'tech_ai_dev',
-  'host_webmaster',
-  'search_resource_tools',
-  'security_system_software',
-  'acg_game_niche',
-  'hardware_homelab',
-  'adult_resource_gray',
-  'overseas_old_forum'
-]);
+const categoriesPath = path.join(repoRoot, 'data', 'categories.json');
 
 const requiredStringFields = [
   'name',
@@ -56,8 +46,46 @@ function readCommunities() {
   }
 }
 
+function readCategories() {
+  try {
+    return JSON.parse(fs.readFileSync(categoriesPath, 'utf8'));
+  } catch (error) {
+    throw new Error(`Failed to read ${path.relative(repoRoot, categoriesPath)}: ${error.message}`);
+  }
+}
+
 const communities = readCommunities();
 const issues = [];
+const categoryList = readCategories();
+const categoryIds = new Set();
+
+if (!Array.isArray(categoryList) || categoryList.length === 0) {
+  issues.push('data/categories.json must contain a non-empty JSON array.');
+} else {
+  categoryList.forEach((category, index) => {
+    const label = `category ${index + 1}`;
+    if (!category || typeof category !== 'object' || Array.isArray(category)) {
+      issues.push(`${label}: entry must be an object`);
+      return;
+    }
+
+    for (const field of ['id', 'name', 'short_name', 'description']) {
+      if (typeof category[field] !== 'string' || category[field].trim() === '') {
+        issues.push(`${label}: ${field} must be a non-empty string`);
+      }
+    }
+
+    if (typeof category.id === 'string' && category.id.trim()) {
+      if (!/^[a-z][a-z0-9_]*$/.test(category.id)) {
+        issues.push(`${label}: id must use lowercase snake_case`);
+      } else if (categoryIds.has(category.id)) {
+        issues.push(`${label}: duplicate id ${category.id}`);
+      } else {
+        categoryIds.add(category.id);
+      }
+    }
+  });
+}
 
 if (!Array.isArray(communities)) {
   issues.push('data/communities.json must contain a JSON array.');
@@ -103,8 +131,8 @@ if (!Array.isArray(communities)) {
       }
     }
 
-    if (typeof item.category === 'string' && !categories.has(item.category)) {
-      pushIssue(issues, index, name, `category must be one of: ${[...categories].join(', ')}`);
+    if (typeof item.category === 'string' && !categoryIds.has(item.category)) {
+      pushIssue(issues, index, name, `category must be one of: ${[...categoryIds].join(', ')}`);
     }
 
     if (Array.isArray(item.sources)) {
