@@ -8,7 +8,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "tech_ai_dev",
+    "category": "dev_ai_open_source",
     "tags": [
       "ai",
       "developer",
@@ -40,7 +40,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "tech_ai_dev",
+    "category": "dev_ai_open_source",
     "tags": [
       "developer",
       "product",
@@ -69,7 +69,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "tech_ai_dev",
+    "category": "dev_ai_open_source",
     "tags": [
       "ai",
       "sillytavern",
@@ -101,7 +101,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "host_webmaster",
+    "category": "hosting_network_ops",
     "tags": [
       "vps",
       "developer",
@@ -130,7 +130,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "host_webmaster",
+    "category": "hosting_network_ops",
     "tags": [
       "vps",
       "network",
@@ -160,7 +160,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "host_webmaster",
+    "category": "hosting_network_ops",
     "tags": [
       "vps",
       "network",
@@ -190,7 +190,7 @@
     "language": [
       "en"
     ],
-    "category": "tech_ai_dev",
+    "category": "dev_ai_open_source",
     "tags": [
       "programming",
       "security",
@@ -217,7 +217,7 @@
     "language": [
       "en"
     ],
-    "category": "tech_ai_dev",
+    "category": "culture_hobbies",
     "tags": [
       "discussion",
       "invite",
@@ -245,7 +245,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "host_webmaster",
+    "category": "hosting_network_ops",
     "tags": [
       "vps",
       "hosting",
@@ -273,7 +273,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "host_webmaster",
+    "category": "webmaster_indieweb",
     "tags": [
       "domain",
       "webmaster",
@@ -303,7 +303,7 @@
     "language": [
       "en"
     ],
-    "category": "host_webmaster",
+    "category": "hosting_network_ops",
     "tags": [
       "vps",
       "hosting",
@@ -331,7 +331,7 @@
     "language": [
       "en"
     ],
-    "category": "host_webmaster",
+    "category": "hosting_network_ops",
     "tags": [
       "vps",
       "hosting",
@@ -358,7 +358,7 @@
     "language": [
       "en"
     ],
-    "category": "host_webmaster",
+    "category": "hosting_network_ops",
     "tags": [
       "hosting",
       "server",
@@ -383,7 +383,7 @@
     "language": [
       "en"
     ],
-    "category": "host_webmaster",
+    "category": "webmaster_indieweb",
     "tags": [
       "domain",
       "marketplace",
@@ -408,7 +408,7 @@
     "language": [
       "en"
     ],
-    "category": "host_webmaster",
+    "category": "hosting_network_ops",
     "tags": [
       "router",
       "network",
@@ -436,7 +436,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "host_webmaster",
+    "category": "hosting_network_ops",
     "tags": [
       "router",
       "openwrt",
@@ -467,7 +467,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "host_webmaster",
+    "category": "webmaster_indieweb",
     "tags": [
       "indie-web",
       "personal-site",
@@ -497,7 +497,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "search_resource_tools",
+    "category": "knowledge_tools",
     "tags": [
       "search",
       "knowledge",
@@ -527,7 +527,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "security_system_software",
+    "category": "systems_security_software",
     "tags": [
       "reverse-engineering",
       "security",
@@ -556,7 +556,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "security_system_software",
+    "category": "systems_security_software",
     "tags": [
       "security",
       "reverse-engineering",
@@ -582,7 +582,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "security_system_software",
+    "category": "systems_security_software",
     "tags": [
       "security",
       "web-security",
@@ -610,7 +610,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "security_system_software",
+    "category": "systems_security_software",
     "tags": [
       "antivirus",
       "windows",
@@ -639,7 +639,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "security_system_software",
+    "category": "systems_security_software",
     "tags": [
       "windows",
       "software",
@@ -668,7 +668,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "security_system_software",
+    "category": "systems_security_software",
     "tags": [
       "pe",
       "boot",
@@ -697,7 +697,7 @@
     "language": [
       "en"
     ],
-    "category": "security_system_software",
+    "category": "systems_security_software",
     "tags": [
       "android",
       "rom",
@@ -729,7 +729,7 @@
       "ja",
       "en"
     ],
-    "category": "acg_game_niche",
+    "category": "games_acg",
     "tags": [
       "anime",
       "game",
@@ -757,7 +757,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "acg_game_niche",
+    "category": "games_acg",
     "tags": [
       "ddlc",
       "acg",
@@ -787,7 +787,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "acg_game_niche",
+    "category": "games_acg",
     "tags": [
       "anime",
       "game",
@@ -815,7 +815,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "acg_game_niche",
+    "category": "games_acg",
     "tags": [
       "console-game",
       "playstation",
@@ -841,7 +841,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "acg_game_niche",
+    "category": "games_acg",
     "tags": [
       "game",
       "old-forum",
@@ -869,7 +869,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "acg_game_niche",
+    "category": "games_acg",
     "tags": [
       "anime",
       "music",
@@ -895,7 +895,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "acg_game_niche",
+    "category": "games_acg",
     "tags": [
       "minecraft",
       "server",
@@ -924,7 +924,7 @@
     "language": [
       "en"
     ],
-    "category": "acg_game_niche",
+    "category": "games_acg",
     "tags": [
       "visual-novel",
       "database",
@@ -952,7 +952,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "acg_game_niche",
+    "category": "games_acg",
     "tags": [
       "steam",
       "game",
@@ -979,7 +979,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "hardware_homelab",
+    "category": "hardware_makers",
     "tags": [
       "hardware",
       "pc",
@@ -1007,7 +1007,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "hardware_homelab",
+    "category": "hardware_makers",
     "tags": [
       "electronics",
       "repair",
@@ -1036,7 +1036,7 @@
     "language": [
       "en"
     ],
-    "category": "hardware_homelab",
+    "category": "hardware_makers",
     "tags": [
       "linux",
       "hardware",
@@ -1060,7 +1060,7 @@
     "language": [
       "en"
     ],
-    "category": "hardware_homelab",
+    "category": "hardware_makers",
     "tags": [
       "electronics",
       "engineering",
@@ -1089,7 +1089,7 @@
     "language": [
       "en"
     ],
-    "category": "hardware_homelab",
+    "category": "hardware_makers",
     "tags": [
       "server",
       "homelab",
@@ -1117,7 +1117,7 @@
     "language": [
       "en"
     ],
-    "category": "hardware_homelab",
+    "category": "hardware_makers",
     "tags": [
       "pc",
       "overclocking",
@@ -1148,7 +1148,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "adult_resource_gray",
+    "category": "adult_gray",
     "tags": [
       "adult",
       "acg",
@@ -1181,7 +1181,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "adult_resource_gray",
+    "category": "adult_gray",
     "tags": [
       "adult",
       "old-forum",
@@ -1214,7 +1214,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "adult_resource_gray",
+    "category": "adult_gray",
     "tags": [
       "adult",
       "game",
@@ -1246,7 +1246,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "adult_resource_gray",
+    "category": "adult_gray",
     "tags": [
       "resource",
       "forum",
@@ -1278,7 +1278,7 @@
     "language": [
       "zh-CN"
     ],
-    "category": "adult_resource_gray",
+    "category": "adult_gray",
     "tags": [
       "adult",
       "resource",
@@ -1312,7 +1312,7 @@
     "language": [
       "en"
     ],
-    "category": "overseas_old_forum",
+    "category": "culture_hobbies",
     "tags": [
       "old-forum",
       "comedy",
@@ -1340,7 +1340,7 @@
     "language": [
       "en"
     ],
-    "category": "overseas_old_forum",
+    "category": "culture_hobbies",
     "tags": [
       "link-sharing",
       "discussion",
@@ -1365,7 +1365,7 @@
     "language": [
       "en"
     ],
-    "category": "overseas_old_forum",
+    "category": "dev_ai_open_source",
     "tags": [
       "technology",
       "science",
@@ -1388,7 +1388,7 @@
     "language": [
       "en"
     ],
-    "category": "overseas_old_forum",
+    "category": "games_acg",
     "tags": [
       "game",
       "industry",
@@ -1413,7 +1413,7 @@
     "language": [
       "en"
     ],
-    "category": "overseas_old_forum",
+    "category": "games_acg",
     "tags": [
       "game",
       "old-forum",
@@ -1428,5 +1428,356 @@
       "https://www.neogaf.com/"
     ],
     "last_checked": "2026-06-22"
+  },
+  {
+    "name": "Emacs China",
+    "aliases": [
+      "Emacs 中文社区"
+    ],
+    "url": "https://emacs-china.org/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "dev_ai_open_source",
+    "tags": [
+      "emacs",
+      "lisp",
+      "editor",
+      "open-source"
+    ],
+    "registration": "开放邮件注册；若收不到激活邮件，官网会提示通过公开 QQ 群联系管理员处理。",
+    "vibe": "中文 Emacs / Lisp 用户社区，长期讨论编辑器配置、Org mode、编程语言和自由软件，规模不大但旧帖积累很深。",
+    "benefits": "适合查 Emacs 配置疑难、Elisp 实践、Org mode 工作流、输入法与中文环境问题，也能看到不少编辑器文化讨论。",
+    "risks": [
+      "邮件激活"
+    ],
+    "notes": "提问前建议先搜索旧帖并提供可复现配置；这里更适合具体技术问题，不是泛软件推荐区。",
+    "sources": [
+      "https://emacs-china.org/",
+      "https://emacs-china.org/tos"
+    ],
+    "last_checked": "2026-07-26"
+  },
+  {
+    "name": "Ruby China",
+    "aliases": [
+      "Ruby 中文社区"
+    ],
+    "url": "https://ruby-china.org/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "dev_ai_open_source",
+    "tags": [
+      "ruby",
+      "rails",
+      "developer",
+      "open-source"
+    ],
+    "registration": "开放注册，需要用户名、Email、密码和页面验证码。",
+    "vibe": "围绕 Ruby、Rails 和中文开发者生态形成的老牌社区，节奏比综合技术论坛慢，技术档案价值高。",
+    "benefits": "适合查 Ruby/Rails 实战问题、工程经验、开源项目、招聘和历年中文社区活动资料。",
+    "risks": [
+      "招聘/商业信息"
+    ],
+    "notes": "部分旧帖对应的依赖版本已经过时，照做前应核对 Ruby、Rails 和 gem 的当前文档。",
+    "sources": [
+      "https://ruby-china.org/",
+      "https://ruby-china.org/account/sign_up"
+    ],
+    "last_checked": "2026-07-26"
+  },
+  {
+    "name": "Arch Linux 中文论坛",
+    "aliases": [
+      "Arch Linux CN Forum",
+      "Archlinux 中文论坛"
+    ],
+    "url": "https://forum.archlinuxcn.org/",
+    "language": [
+      "zh-CN"
+    ],
+    "category": "systems_security_software",
+    "tags": [
+      "linux",
+      "archlinux",
+      "system",
+      "open-source"
+    ],
+    "registration": "论坛现使用 Discourse，开放 Email 账号注册。",
+    "vibe": "Arch Linux 中文用户的技术论坛，问题通常围绕安装、软件包、桌面环境、驱动和系统维护，强调先查文档。",
+    "benefits": "适合查中文 Arch 使用经验、archlinuxcn 仓库相关问题、滚动更新故障和本地化配置。",
+    "risks": [
+      "系统操作风险"
+    ],
+    "notes": "论坛于 2026 年迁移到 Discourse。执行磁盘、引导或包管理命令前，应先理解命令并保留备份。",
+    "sources": [
+      "https://forum.archlinuxcn.org/",
+      "https://forum.archlinuxcn.org/signup"
+    ],
+    "last_checked": "2026-07-26"
+  },
+  {
+    "name": "MelonLand Forum",
+    "aliases": [
+      "MelonLand"
+    ],
+    "url": "https://forum.melonland.net/",
+    "language": [
+      "en"
+    ],
+    "category": "webmaster_indieweb",
+    "tags": [
+      "indieweb",
+      "personal-web",
+      "old-web",
+      "web-art"
+    ],
+    "registration": "开放账号注册；加入前建议先读 forum help 和社区 guidelines。",
+    "vibe": "围绕个人主页、手写网页、Web 艺术和旧互联网文化形成的英文社区，创作导向强，刻意远离平台化社交节奏。",
+    "benefits": "适合找个人网站灵感、HTML/CSS 实践、webring、网页收藏、数字花园和复古 Web 文化讨论。",
+    "risks": [],
+    "notes": "论坛每周一会按社区机制关闭，不代表站点故障；发帖前应尊重其反增长、重个人表达的语境。",
+    "sources": [
+      "https://forum.melonland.net/",
+      "https://wiki.melonland.net/guidelines",
+      "https://wiki.melonland.net/forum_help"
+    ],
+    "last_checked": "2026-07-26"
+  },
+  {
+    "name": "OSDev.org Forum",
+    "aliases": [
+      "OSDev Forum"
+    ],
+    "url": "https://forum.osdev.org/",
+    "language": [
+      "en"
+    ],
+    "category": "systems_security_software",
+    "tags": [
+      "operating-system",
+      "kernel",
+      "low-level",
+      "compiler"
+    ],
+    "registration": "开放论坛账号注册，需同意站点条款并完成页面验证。",
+    "vibe": "专注自制操作系统、内核、引导、编译器和底层架构的英文老论坛，技术门槛高，重视资料检索和最小复现。",
+    "benefits": "适合查 x86/ARM 启动、内存管理、文件系统、驱动、工具链和 OS 设计理论。",
+    "risks": [
+      "高技术门槛"
+    ],
+    "notes": "先读 OSDev Wiki 和论坛置顶资料。只描述目标而没有代码、日志或已查资料，通常很难得到有效回复。",
+    "sources": [
+      "https://forum.osdev.org/",
+      "https://forum.osdev.org/ucp.php?mode=register"
+    ],
+    "last_checked": "2026-07-26"
+  },
+  {
+    "name": "VOGONS",
+    "aliases": [
+      "Very Old Games On New Systems"
+    ],
+    "url": "https://www.vogons.org/",
+    "language": [
+      "en"
+    ],
+    "category": "hardware_makers",
+    "tags": [
+      "retro-computing",
+      "dos",
+      "emulation",
+      "hardware"
+    ],
+    "registration": "开放论坛账号注册，需同意条款并完成页面验证。",
+    "vibe": "围绕 DOS、旧版 Windows、模拟器、老游戏兼容和复古 PC 硬件形成的英文技术论坛，资料跨度很长。",
+    "benefits": "适合查声卡、显卡、主板、驱动、DOSBox、旧游戏兼容和复古装机经验。",
+    "risks": [
+      "旧驱动/固件风险"
+    ],
+    "notes": "旧帖里的下载链接和驱动来源可能已经失效或被替换，安装前应核验文件来源并做好隔离与备份。",
+    "sources": [
+      "https://www.vogons.org/",
+      "https://www.vogons.org/ucp.php?mode=register"
+    ],
+    "last_checked": "2026-07-26"
+  },
+  {
+    "name": "Badcaps Electronics Repair Forum",
+    "aliases": [
+      "Badcaps Forum"
+    ],
+    "url": "https://www.badcaps.net/",
+    "language": [
+      "en"
+    ],
+    "category": "hardware_makers",
+    "tags": [
+      "electronics",
+      "repair",
+      "schematics",
+      "firmware"
+    ],
+    "registration": "开放论坛账号注册；下载附件和参与讨论通常需要登录，并应按版规提供设备型号与测量信息。",
+    "vibe": "偏实战的电子维修论坛，常见主板、电源、显示器、BIOS、板图和原理图讨论，专业维修从业者较多。",
+    "benefits": "适合查故障案例、元件测量、板级维修思路、BIOS 问题和维修资料线索。",
+    "risks": [
+      "电气安全",
+      "固件刷写风险",
+      "资料版权"
+    ],
+    "notes": "高压电源和带电测量可能致伤；刷写 BIOS 或使用板图前应确认精确板号、备份原固件，并遵守资料版权要求。",
+    "sources": [
+      "https://www.badcaps.net/",
+      "https://www.badcaps.net/forum/welcome-to-the-badcaps-net-tech-forum/frequently-asked-questions-no-posting"
+    ],
+    "last_checked": "2026-07-26"
+  },
+  {
+    "name": "diyAudio",
+    "aliases": [
+      "diyAudio Community"
+    ],
+    "url": "https://www.diyaudio.com/community/",
+    "language": [
+      "en"
+    ],
+    "category": "hardware_makers",
+    "tags": [
+      "audio",
+      "electronics",
+      "speaker",
+      "amplifier"
+    ],
+    "registration": "开放社区账号注册，发帖和交易区权限以当前版规与账号状态为准。",
+    "vibe": "大型但高度垂直的音频 DIY 社区，讨论扬声器、功放、模拟/数字电路、测量和项目制作，工程派与发烧友并存。",
+    "benefits": "适合查箱体设计、分频、放大器拓扑、DAC、测量方法、元件替代和长期项目记录。",
+    "risks": [
+      "电气安全",
+      "交易信息"
+    ],
+    "notes": "真空管、高压电源和大功率设备存在人身与设备风险；交易前独立核验卖家和付款条件。",
+    "sources": [
+      "https://www.diyaudio.com/community/"
+    ],
+    "last_checked": "2026-07-26"
+  },
+  {
+    "name": "Doomworld Forums",
+    "aliases": [
+      "Doomworld"
+    ],
+    "url": "https://www.doomworld.com/forum/",
+    "language": [
+      "en"
+    ],
+    "category": "games_acg",
+    "tags": [
+      "doom",
+      "modding",
+      "mapping",
+      "speedrunning"
+    ],
+    "registration": "开放账号注册，需要 Email、显示名、密码和页面安全验证。",
+    "vibe": "围绕 Doom 系列、WAD、地图、MOD、源端口和速通延续至今的老牌英文社区，创作与档案密度都很高。",
+    "benefits": "适合找地图制作教程、MOD 发布、引擎开发、赛事、速通和几十年积累的 Doom 社区史料。",
+    "risks": [
+      "第三方文件"
+    ],
+    "notes": "下载 WAD、MOD 或工具时核验发布帖和作者来源；发作品前先阅读对应板块的格式与反馈规则。",
+    "sources": [
+      "https://www.doomworld.com/forum/",
+      "https://www.doomworld.com/register/"
+    ],
+    "last_checked": "2026-07-26"
+  },
+  {
+    "name": "Cloudy Nights",
+    "aliases": [
+      "Cloudy Nights Forums"
+    ],
+    "url": "https://www.cloudynights.com/",
+    "language": [
+      "en"
+    ],
+    "category": "culture_hobbies",
+    "tags": [
+      "astronomy",
+      "telescope",
+      "astrophotography",
+      "observing"
+    ],
+    "registration": "开放账号注册，需要显示名、Email、密码和页面安全验证。",
+    "vibe": "业余天文领域的老牌英文社区，从目视观测、望远镜器材到天文摄影都有稳定分区，经验帖非常多。",
+    "benefits": "适合查器材选购、观测报告、光学调校、赤道仪、深空摄影、行星摄影和地区观测活动。",
+    "risks": [
+      "二手交易"
+    ],
+    "notes": "站内有 classifieds；购买二手高价器材前应独立核验卖家、成色、运输与付款保障。",
+    "sources": [
+      "https://www.cloudynights.com/",
+      "https://www.cloudynights.com/forums/",
+      "https://www.cloudynights.com/register/"
+    ],
+    "last_checked": "2026-07-26"
+  },
+  {
+    "name": "Fountain Pen Network",
+    "aliases": [
+      "FPN"
+    ],
+    "url": "https://www.fountainpennetwork.com/forum/",
+    "language": [
+      "en"
+    ],
+    "category": "culture_hobbies",
+    "tags": [
+      "fountain-pen",
+      "ink",
+      "paper",
+      "collecting"
+    ],
+    "registration": "账号注册和发帖权限以论坛当前页面及版规为准。",
+    "vibe": "围绕钢笔、墨水、纸张、书写、维修和收藏史形成的英文老论坛，评测与历史资料丰富。",
+    "benefits": "适合查笔款识别、墨水表现、纸张兼容、笔尖调整、维修经验、品牌历史和线下笔会。",
+    "risks": [
+      "收藏品交易"
+    ],
+    "notes": "站内 marketplace 涉及真伪、品相和跨境运输；高价收藏品应使用可追踪、具保障的交易方式。",
+    "sources": [
+      "https://www.fountainpennetwork.com/forum/"
+    ],
+    "last_checked": "2026-07-26"
+  },
+  {
+    "name": "OpenStreetMap Community Forum",
+    "aliases": [
+      "OSM Community Forum"
+    ],
+    "url": "https://community.openstreetmap.org/",
+    "language": [
+      "en"
+    ],
+    "category": "knowledge_tools",
+    "tags": [
+      "open-data",
+      "mapping",
+      "geography",
+      "openstreetmap"
+    ],
+    "registration": "使用 OpenStreetMap 账号通过 OAuth 登录；没有 OSM 账号时需先在主站注册。",
+    "vibe": "OpenStreetMap 的官方社区论坛，涵盖制图、标签规范、数据使用、编辑器、地区项目和社区治理，并设有多语言分区。",
+    "benefits": "适合查地图编辑争议、tagging 方案、导入与数据质量、工具开发、本地社群和开放地理数据实践。",
+    "risks": [
+      "公开位置数据"
+    ],
+    "notes": "编辑真实地点或发布轨迹时注意个人与敏感设施信息；大规模导入、机械编辑前应先遵守 OSM 社区流程。",
+    "sources": [
+      "https://community.openstreetmap.org/",
+      "https://community.openstreetmap.org/t/how-to-use-this-forum-for-new-users/314",
+      "https://community.openstreetmap.org/signup"
+    ],
+    "last_checked": "2026-07-26"
   }
 ]
